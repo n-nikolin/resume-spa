@@ -1,0 +1,160 @@
+/* VERYVERY IMPORTANT!! Make it not shit on mobile */
+
+/* a very neat trick:
+outline: solid 1px red; */
+
+* {
+  --size: 2.7rem;
+  scroll-snap-type: y mandatory;
+  scroll-padding: var(--size);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.app-container {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.landing-header {
+  min-height: 200px;
+  max-height: 40vh;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* navbar should change color depending on which section it is displayed */
+.navbar {
+  position: sticky;
+  top: 0;
+  list-style: none;
+  background-color: black;
+  text-align: center;
+  margin: 1em 0em;
+  max-width: calc(100% - 2em);
+}
+
+li {
+  display: inline;
+}
+
+/* play around with this for a bit
+and maybe use hamburger menu for narrow screens */
+/* THIS looks OKAY on my phone */
+/* margin:  0px 5px; */
+li a {
+  display: inline-block;
+  margin: 10px 3%;
+  text-decoration: none;
+  color: white;
+}
+
+section {
+  scroll-snap-align: start;
+  height: calc(100vh - var(--size));
+  align-items: center;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+/* LANGUAGE TOGGLE SWITCH STUFF */
+.language-switch {
+  position: fixed;
+  right: 1em;
+  top: 0.6em;
+  /* THIS IS TO PREVENT THE SWITCH FROM DISAPPEARING */
+  z-index: 99;
+}
+
+/* THERE IS A BIT OF A PROBLEM WITH  THE CLICKY ZONE*/
+input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  transform: scale(1.7);
+}
+
+/* #en {
+  margin: 5rem
+} */
+
+.language-switch label {
+  padding: 1vh;
+  background-color: red;
+  padding: 5px;
+}
+
+input[type="radio"]:checked + label {
+  outline: rgba(77, 97, 171, 0.5) auto 3px;
+  background-color: green;
+}
+
+/* GALLERY-RELATED SHIT */
+/* TODO: make cards resizable */
+/* TODO: make cards clickable and expandable*/
+.cards-wrapper {
+  display: grid;
+  max-width: 1600px;
+  /* grid-template-columns: repeat(4, 20%); */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  background-color: #fff;
+  color: #444;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  background-color: #444;
+  color: #fff;
+  padding: 2px;
+}
+
+/* div {
+  outline: red solid 1px;
+} */
+
+/* CONTACT_ME STYLES */
+.contact-me {
+  box-sizing: border-box;
+}
+
+.contact-me-container {
+  background-color: grey;
+  max-width: 36rem;
+  margin: auto;
+  padding: 1rem;
+}
+
+textarea,
+input[type="email"] {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+
+.message-field,
+.email-field {
+  display: grid; 
+  grid-template-columns: 110px 1fr;
+  margin-top: 0.7rem;
+}
+
+.buttons {
+  margin-top: 1rem;
+  align-items: right;
+  text-align: right;
+}
+
+/* Scroll to top button */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
