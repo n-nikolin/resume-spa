@@ -22,7 +22,7 @@ function ContactMe() {
           </div>
           <div className="message-field">
             <label htmlFor="message">MESSAGE</label>
-            <textarea name="meassage-text" id="message" cols="30" rows="10"></textarea>
+            <textarea name="meassage-text" id="message" cols="30" rows="5"></textarea>
           </div>
           <div className="buttons">
             {/* TODO: Play around with the input:file button */}

@@ -14,7 +14,7 @@ function MyProjects() {
       {/* deal with the THERE IS NO KEY issue
       or at least keep that in mind until next time
       because maybe this will not be needed for this project */}
-      <div className="cards-wrapper">{cards.map((card) => card)}</div>
+      {/* <div className="cards-wrapper">{cards.map((card) => card)}</div> */}
     </section>
   );
 }

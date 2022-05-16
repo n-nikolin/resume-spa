@@ -7,6 +7,7 @@ outline: solid 1px red; */
   --size: 2.7rem;
   scroll-snap-type: y mandatory;
   scroll-padding: var(--size);
+  scroll-behavior: smooth;
   font-size: 1.1rem;
   line-height: 1.5;
 }
@@ -19,7 +20,7 @@ outline: solid 1px red; */
 }
 
 .landing-header {
-  min-height: 200px;
+  min-height: 20vh;
   max-height: 40vh;
 }
 
@@ -122,6 +123,7 @@ input[type="radio"]:checked + label {
 /* CONTACT_ME STYLES */
 .contact-me {
   box-sizing: border-box;
+  height: 110vh;
 }
 
 .contact-me-container {
@@ -158,3 +160,26 @@ input[type="email"] {
   bottom: 30px;
   right: 20px;
 }
+
+
+/* SCROLLBAR STUFF */
+/* read some more about @supports */
+textarea {
+  scrollbar-width: thin;
+  scrollbar-color: grey white;
+}
+
+/* Works on Chrome, Edge, and Safari */
+textarea::-webkit-scrollbar {
+  width: 12px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: white;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.927);
+  border-radius: 7px;
+  border: 3px solid white
+} 
