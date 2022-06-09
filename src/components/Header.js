@@ -1,15 +1,12 @@
-import React from "react";
+import React from 'react'
 
-export default function Header() {
+export default function Header(props) {
   return (
     <section className="header">
-      <header className="greeting-header">
-        <h1>Just another Russian codemonkey</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-          laudantium at, molestiae consectetur ratione molestias.
-        </p>
-      </header>
-    </section>
-  );
+    <header className="greeting-header">
+      <h1>{props.heading}</h1>
+      <p>{props.subheading}</p>
+    </header>
+  </section>
+  )
 }
