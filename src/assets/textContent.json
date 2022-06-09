@@ -1,0 +1,76 @@
+{
+  "ru": {
+    "navbar": {
+      "about_me": "обо мне",
+      "my_projects": "мои проекты",
+      "contact_me": "напиши мне"
+    },
+    "header": {
+      "heading": "Привет, я Никита",
+      "subheading": "это мой сайт/портфолио/резюме"
+    },
+    "about_me": {
+      "heading": "обо мне",
+      "general": "ну я это я. короче: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam excepturi culpa illum. Natus veritatis illo dolorum alias temporibus ut quaerat porro odio hic dolorem cum, saepe qui, nam fugit distinctio? Beatae est tempora dignissimos ex officiis quod quam et error quas, repudiandae excepturi possimus commodi mollitia rerum natus animi aliquam assumenda exercitationem. Aliquid, neque iure in eius hic expedita similique dolores fugiat culpa perspiciatis ipsum odio quos totam illum eveniet. Ex, tempore enim iste delectus, facilis reiciendis facere quidem ut molestias aliquam nulla asperiores ab magnam fugiat itaque! Eos culpa impedit possimus distinctio, voluptate quaerat accusamus odio praesentium accusantium nemo!"
+    },
+    "my_projects": {
+      "heading": "мои проекты",
+      "projects": [
+        {
+          "title": "проектнейм",
+          "description": "это какой_то проект. в общем, это все гавно должно фечится с гитхаба, но пока там у меня одна зашкварная параша, так что нет и вообще, это все пока что прототип и просто заполнение места текстом, чтобы посмотреть как оно выглядеть будет, но потом тоже ради прикола дабавлю хуйню, которая будет названия и описания с гитхаба фетчить"
+        }
+      ]
+    },
+    "contact_me": {
+      "heading": "Контактнуть",
+      "legend": {
+        "heading": "напиши мне",
+        "legend": "тут короче тоже лорем ипсум долор сит и тд и тп. так вот я еще не придумал, какой текст сюда вставить, но жолжно быть сколько_то слов или символов. наверное столько сойдет"
+      },
+      "label": { "name": "Имя", "email": "Email", "message": "Сообщение" },
+      "submit_btn": "Отправить"
+    },
+    "footer": {
+      "par_1": "тут футер какой_то я  пока не придумал, что тут писать бля залупа. очень не хочется придумывать такую хуйню",
+      "par_2": " хочу просто кодить, епта, а не заниматься всей этой хуйней. ну, внатуре, тут чисто каку с тренироовкамиЖ самое простое и понятное - потренироваться, а остальное пиздец трудно. спать вовремя, есть достаточно и тоже вовремя. пиздец. "
+    }
+  },
+  "en": {
+    "navbar": {
+      "about_me": "about me",
+      "my_projects": "my projects",
+      "contact_me": "contact me"
+    },
+    "header": {
+      "heading": "Just another Russian codemonkey",
+      "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit laudantium at, molestiae consectetur ratione molestias."
+    },
+    "about_me": {
+      "heading": "About Me",
+      "general": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam excepturi culpa illum. Natus veritatis illo dolorum alias temporibus ut quaerat porro odio hic dolorem cum, saepe qui, nam fugit distinctio? Beatae est tempora dignissimos ex officiis quod quam et error quas, repudiandae excepturi possimus commodi mollitia rerum natus animi aliquam assumenda exercitationem. Aliquid, neque iure in eius hic expedita similique dolores fugiat culpa perspiciatis ipsum odio quos totam illum eveniet. Ex, tempore enim iste delectus, facilis reiciendis facere quidem ut molestias aliquam nulla asperiores ab magnam fugiat itaque! Eos culpa impedit possimus distinctio, voluptate quaerat accusamus odio praesentium accusantium nemo!"
+    },
+    "my_projects": {
+      "heading": "мMy Projects",
+      "projects": [
+        {
+          "title": "ProjectName",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, provident!"
+        }
+      ]
+    },
+    "contact_me": {
+      "heading": "Contact Me",
+      "legend": {
+        "heading": "Leave me a message",
+        "legend": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sit sunt maxime ex harum quam!"
+      },
+      "label": { "email": "Email", "message": "Message", "name": "Name" },
+      "submit_btn": "Submit"
+    },
+    "footer": {
+      "par_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas similique, dolorum praesentium modi nulla distinctio.",
+      "par_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas similique, dolorum praesentium modi nulla distinctio."
+    }
+  }
+}

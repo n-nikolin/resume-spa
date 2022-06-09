@@ -1,0 +1,270 @@
+:root {
+  --primary-font: "Montserrat", sans-serif;
+  /* --rich-black: #0d1821ff;
+    --prussian-blue: #012a4aff;
+    --indigo-dye: #013a63ff;
+    --indigo-dye-2: #01497cff;
+    --usafa-blue: #014f86ff;
+    --honolulu-blue: #2a6f97ff;
+    --celadon-blue: #2c7da0ff;
+    --blue-green: #468fafff;
+    --maximum-blue: #61a5c2ff;
+    --dark-sky-blue: #89c2d9ff;
+    --light-blue: #a9d6e5ff;
+    --light-steel-blue: #b4cdedff;
+    --baby-powder: #f0f4efff;
+    --sage: #bfcc94ff; */
+} 
+
+* {
+  margin: 0;
+  outline: solid;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  /* background-color: blanchedalmond; */
+  width: 100%;
+}
+
+div {
+  /* outline: solid; */
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1.4rem;
+  z-index: 999;
+}
+
+textarea {
+  resize: none;
+}
+
+/* navbar */
+.hamburger-menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+}
+
+.hamburger-menu img {
+  width: 2rem
+}
+
+.navbar {
+  display:none;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99;
+  padding-top: 5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--rich-black);
+  font-size: 3rem;
+  color: var(--baby-powder);
+}
+
+.navbar a:hover {
+  color: var(--sage);
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0%;
+}
+
+.navbar li {
+  text-align: center;
+  padding: 0.1em;
+}
+
+ul:last-child {
+  padding-bottom: 2em;
+}
+
+/* LANGUAGE SWICTCH */
+.language-switch {
+  padding: 0.6em;
+  text-align: right;
+}
+
+input[type="radio"] {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.language-switch label {
+  background-color: red;
+  border-radius: 50%;
+  padding: 0.6em;
+  cursor: pointer;
+  color: var(--baby-powder);
+}
+
+input[type="radio"]:checked + label {
+  background-color: green;
+}
+
+/* HEADER */
+.greeting-header {
+  background-color: var(--indigo-dye);
+  color: var(--baby-powder);
+  text-align: center;
+  align-content: center;
+}
+
+.greeting-header h1 + p {
+  width: 90%;
+  margin: auto;
+}
+
+.greeting-header p {
+  color: var(--sage);
+  padding: 0em 0.7em 1em 0.7em;
+}
+
+/* when setting max-width, text moves to one side */
+.greeting-header h1 {
+  padding: 0.7em 1em 0.3em 1em;
+}
+
+/* ABOUT ME */
+.about-me-container {
+  background-color: var(--indigo-dye-2);
+  color: var(--baby-powder);
+  box-sizing: border-box;
+  /* text-align: center; */
+  /* align-items: center */
+}
+
+.about-me-container-content {
+  display: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 90%;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.about-me-container h4 {
+  color: var(--baby-powder);
+}
+
+.about-me-container p {
+  color: var(--sage);
+  max-width: 56ch;
+  padding-top: 1rem;
+}
+
+.about-me-container img {
+  padding: 0.275em 0em;
+  border-radius: 50%;
+  width: 30%;
+  height: auto;
+  border-color: var(--baby-powder);
+  filter: drop-shadow(0 0 1rem);
+  /* border: solid 0.1em; */
+  /* margin: auto; */
+  float: right;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: right;
+}
+
+/* MY PROJECTS SECTION */
+.my-projects-container {
+  background-color: var(--celadon-blue);
+  color: var(--baby-powder);
+  text-align: center;
+}
+
+.project-cards {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-cards div {
+  padding: 2rem;
+  cursor: pointer;
+}
+
+#expand {
+  /* display:none; */
+}
+
+/* CONTACT ME CONTAINER */
+.contact-me-container {
+  margin: 0 auto;
+  /* padding: 0 2rem; */
+  width: 90%;
+}
+
+.contact-me-container form {
+  display: grid;
+}
+
+.contact-me-container label,
+input,
+textarea {
+  margin: 0 0.5em;
+}
+
+.submit-btn {
+  margin: 0.5em;
+  padding: 0.5rem;
+}
+
+/* footer */
+footer {
+  padding: 2em;
+  width: 90%;
+  margin:0 auto;
+  margin-bottom: 2rem 
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-container-content {
+    display: flex;
+  }
+  .about-me-container img {
+    float: none;
+  }
+  .project-cards div {
+    width: 30%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .contact-me-container {
+    width: 56ch;
+  }
+}
