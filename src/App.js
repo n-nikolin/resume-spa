@@ -11,6 +11,7 @@ import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
 
 function App() {
+  // changeLanguage should be a custom hook
   const [currentLanguage, setCurrentLanguage] = useState(textContent.en);
   const [checked, setChecked] = useState(true);
 
@@ -26,12 +27,10 @@ function App() {
       console.log("en is current");
       setCurrentLanguage(textContent.en);
     }
+    console.log(currentLanguage);
   }
 
-  function expandProjectCard() {
-    // document.getElementsById("expand").style.display="block"
-    console.log("expandio!!");
-  }
+  const projects = currentLanguage.my_projects.projects;
 
   return (
     <div>
@@ -81,8 +80,7 @@ function App() {
       />
       <MyProjects
         heading={currentLanguage.my_projects.heading}
-        title={currentLanguage.my_projects.projects[0].title}
-        description={currentLanguage.my_projects.projects[0].description}
+        projectList = {projects}
       />
       <ContactMe
         heading={currentLanguage.contact_me.heading}
