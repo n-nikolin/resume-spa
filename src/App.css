@@ -213,30 +213,31 @@ input[type="radio"]:checked + label {
   justify-content: space-around;
 }
 
-.project-cards div {
-  padding: 2rem;
+.project-card {
+  width: 90%;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
-#expand {
+.modal-card {
   display:none;
   position: fixed; /* Stay in place */
   z-index: 9999999; /* Sit on top */
   left: 0;
-  top: 0;
+  top: 0%;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-#expand div {
+.modal-card div {
   width: 90%;
   height: 80%;
   background-color: white;
   overflow: auto;
-  margin: 0 auto;
+  margin: auto;
+  margin-top: 2rem
 }
 
 /* CONTACT ME CONTAINER */
@@ -276,12 +277,12 @@ footer {
   .about-me-container img {
     float: none;
   }
-  .project-cards div {
+  .project-card {
     width: 30%;
     flex-direction: row;
     flex-wrap: wrap;
   }
   .contact-me-container {
-    width: 56ch;
+    width: 50ch;
   }
 }

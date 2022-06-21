@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectCardModal from "./ProjectCardModal";
 
 export default function MyProjects(props) {
   return (
@@ -8,11 +9,18 @@ export default function MyProjects(props) {
       <div className="project-cards">
         {props.projectList.map((project, index) => {
           return (
-            <ProjectCard
-              key = {index}
-              title={project.title}
-              description={project.description}
-            />
+            <div className="project-card" key={index}>
+              <ProjectCard
+                id={project.id}
+                title={project.title}
+                description={project.description}
+              />
+              {/* <ProjectCardModal
+                id={project.id}
+                title={project.title}
+                description={project.description}
+              /> */}
+            </div>
           );
         })}
       </div>

@@ -1,60 +1,42 @@
 import React from "react";
 import { useState } from "react";
 import gitHubLogo from "../assets/GitHub-Mark-64px.png";
+import ProjectCardModal from "./ProjectCardModal";
 
 export default function ProjectCard(props) {
   // this shit doesn't work as intended
-
+  // rewrite as useReducer hook
   const [modal, setModal] = useState(false);
+  // const [activeObject, setActiveObject] = useState(null);
 
-  function showDescription() {
+  // // this is the thingy I need:
+  // const description = document.getElementById("expand");
+  const handleClick = (id) => {
     setModal(!modal);
-    const description = document.getElementById("expand");
-    if (modal) {
-      console.log(modal + '0');
-      description.style.display = "none";
+    console.log(id);
+    if (!modal) {
+      document.getElementById(`expand-${id}`).style.display = "block";
     } else {
-      console.log(modal + '1');
-      description.style.display = "block";
+      document.getElementById(`expand-${id}`).style.display = "none";
     }
-  }
-  // console.log(modal);
+  };
 
   return (
     <div
-      className="project-card-expandable"
       onClick={() => {
-        showDescription();
+        handleClick(props.id);
       }}
     >
       <h3>{props.title}</h3>
       <p>{props.description}</p>
-      <div id="expand">
-        <div>
-          <h3>{props.title}</h3>
-          <p>{props.description}</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-            excepturi deserunt iusto quis fugit repudiandae, odio molestiae
-            optio suscipit magnam nostrum et quod enim itaque perspiciatis
-            temporibus nihil! Saepe, error? Illo doloribus rem explicabo et
-            incidunt iure deleniti cumque quo necessitatibus, consequuntur
-            exercitationem rerum omnis numquam veritatis in excepturi vel
-            inventore commodi eveniet fugiat aperiam aliquid cum magnam. Labore,
-            facere sint. Cumque expedita deleniti quam nisi hic veniam vero
-            voluptates perferendis at nulla reprehenderit deserunt labore quia
-            optio saepe ex, sapiente dolor veritatis atque est sed rerum eos
-            laboriosam. Voluptatibus laudantium qui itaque architecto. Dolorem
-            repellendus sit ad nulla unde.
-          </p>
-          <a href="#">
-            <img src={gitHubLogo} alt="github logo" />
-          </a>
-        </div>
-      </div>
-      <a href="#">
+      <a href="#!">
         <img src={gitHubLogo} alt="github logo" />
       </a>
+      <ProjectCardModal
+        id={props.id}
+        title={props.title}
+        description={props.description}
+      />
     </div>
   );
 }

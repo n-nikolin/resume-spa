@@ -20,14 +20,13 @@ function App() {
     // got an idea how to do it another way, by using links
     // should probably try that out just for fun
     setChecked(!checked);
-    if (document.getElementById("ru").checked == true) {
-      console.log("ru is current");
+    if (document.getElementById("ru").checked === true) {
       setCurrentLanguage(textContent.ru);
+      console.log("ru is current");
     } else {
-      console.log("en is current");
       setCurrentLanguage(textContent.en);
+      console.log("en is current");
     }
-    console.log(currentLanguage);
   }
 
   const projects = currentLanguage.my_projects.projects;
