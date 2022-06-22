@@ -7,10 +7,9 @@ export default function HamburgerMenu() {
   function openNavMenu() {
     // tweak this to make it not look shit and be less invasive
     setOverlay(!overlay);
-    // console.log(overlay);
     const navOverlay = document.getElementById("overlay");
 
-    if (overlay == false) {
+    if (overlay === false) {
       navOverlay.style.display = "none";
     } else {
       navOverlay.style.display = "block";
@@ -20,8 +19,12 @@ export default function HamburgerMenu() {
   return (
     <div>
       <div className="hamburger-menu">
-        <button onClick={openNavMenu}>
-          <img src={hamburgerMenu} />
+        <button
+          onClick={() => {
+            openNavMenu();
+          }}
+        >
+          <img src={hamburgerMenu} alt='a hamburger menu icon' />
         </button>
       </div>
     </div>

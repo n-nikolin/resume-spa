@@ -4,6 +4,7 @@ import textContent from "./assets/textContent.json";
 import { useState } from "react";
 import Header from "./components/Header";
 import HamburgerMenu from "./components/HamburgerMenu";
+import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import AboutMe from "./components/AboutMe";
 import MyProjects from "./components/MyProjects";
@@ -33,41 +34,33 @@ function App() {
 
   return (
     <div>
+      <div className="language-switch">
+        {/* LANGUAGE SWITCH COMPONENT */}
+        {/* language switch should also be on top of header section,
+        so that there is no need to use the menu */}
+        <input
+          type="radio"
+          name="selected-language"
+          id="en"
+          onChange={changeLanguage}
+          defaultChecked="true"
+        />
+        <label htmlFor="en">EN</label>
+        <input
+          type="radio"
+          name="selected-language"
+          id="ru"
+          onChange={changeLanguage}
+        />
+        <label htmlFor="ru">RU</label>
+      </div>
       <HamburgerMenu />
       {/* NAVBAR */}
-      <div className="navbar" id="overlay">
-        <div className="language-switch">
-          {/* LANGUAGE SWITCH COMPONENT */}
-          {/* language switch should also be on top of header section,
-        so that there is no need to use the menu */}
-          <input
-            type="radio"
-            name="selected-language"
-            id="en"
-            onChange={changeLanguage}
-            defaultChecked="true"
-          />
-          <label htmlFor="en">EN</label>
-          <input
-            type="radio"
-            name="selected-language"
-            id="ru"
-            onChange={changeLanguage}
-          />
-          <label htmlFor="ru">RU</label>
-        </div>
-        <ul>
-          <li>
-            <a href="#about-me">{currentLanguage.navbar.about_me}</a>
-          </li>
-          <li>
-            <a href="#my-projects">{currentLanguage.navbar.my_projects}</a>
-          </li>
-          <li>
-            <a href="#contact-me">{currentLanguage.navbar.contact_me}</a>
-          </li>
-        </ul>
-      </div>
+      <Navbar
+        aboutMe={currentLanguage.navbar.about_me}
+        myProjects={currentLanguage.navbar.my_projects}
+        contactMe={currentLanguage.navbar.contact_me}
+      />
       <Header
         heading={currentLanguage.header.heading}
         subheading={currentLanguage.header.subheading}
@@ -79,7 +72,7 @@ function App() {
       />
       <MyProjects
         heading={currentLanguage.my_projects.heading}
-        projectList = {projects}
+        projectList={projects}
       />
       <ContactMe
         heading={currentLanguage.contact_me.heading}

@@ -1,6 +1,4 @@
-import React from "react";
 import ProjectCard from "./ProjectCard";
-import ProjectCardModal from "./ProjectCardModal";
 
 export default function MyProjects(props) {
   return (
@@ -15,11 +13,6 @@ export default function MyProjects(props) {
                 title={project.title}
                 description={project.description}
               />
-              {/* <ProjectCardModal
-                id={project.id}
-                title={project.title}
-                description={project.description}
-              /> */}
             </div>
           );
         })}
