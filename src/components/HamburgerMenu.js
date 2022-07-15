@@ -1,31 +1,42 @@
 import hamburgerMenu from "../assets/hamburgerMenu.svg";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
-export default function HamburgerMenu() {
-  const [overlay, setOverlay] = useState(true);
+export default function HamburgerMenu(props) {
+  const [overlay, setOverlay] = useState(false);
+  const navbarRef = useRef();
 
-  function openNavMenu() {
-    // tweak this to make it not look shit and be less invasive
-    setOverlay(!overlay);
-    const navOverlay = document.getElementById("overlay");
+  useEffect(() => {
+    const closeNavbar = (e) => {
+      if (e.composedPath()[1] !== navbarRef.current) {
+        setOverlay(false);
+      }
+    };
 
-    if (overlay === false) {
-      navOverlay.style.display = "none";
-    } else {
-      navOverlay.style.display = "block";
-    }
-  }
+    document.body.addEventListener("click", closeNavbar);
+    return () => {
+      document.body.removeEventListener("click", closeNavbar);
+    };
+  }, []);
 
   return (
     <div>
       <div className="hamburger-menu">
-        <button
-          onClick={() => {
-            openNavMenu();
-          }}
-        >
-          <img src={hamburgerMenu} alt='a hamburger menu icon' />
+        <button ref={navbarRef} onClick={() => setOverlay((prev) => !prev)}>
+          <img src={hamburgerMenu} alt="a hamburger menu icon" />
         </button>
+      </div>
+      <div className={"navbar " + (overlay ? "open" : "closed")}>
+        <ul>
+          <li>
+            <a href="#about-me">abt-me</a>
+          </li>
+          <li>
+            <a href="#my-projects">projects</a>
+          </li>
+          <li>
+            <a href="#contact-me">contact-me</a>
+          </li>
+        </ul>
       </div>
     </div>
   );

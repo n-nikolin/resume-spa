@@ -34,6 +34,19 @@ function App() {
 
   return (
     <div>
+      {/* <div className="navbar-inline">
+        <ul>
+          <li>
+            <a href="#about-me">ABOUT ME</a>
+          </li>
+          <li>
+            <a href="#my-projects">MY PROJECTS</a>
+          </li>
+          <li>
+            <a href="#contact-me">CONTACT ME</a>
+          </li>
+        </ul>
+      </div> */}
       <div className="language-switch">
         {/* LANGUAGE SWITCH COMPONENT */}
         {/* language switch should also be on top of header section,
@@ -55,12 +68,12 @@ function App() {
         <label htmlFor="ru">RU</label>
       </div>
       <HamburgerMenu />
-      {/* NAVBAR */}
-      <Navbar
+      {/* make it so that navbar list is mapped and not hardcoded */}
+      {/* <Navbar
         aboutMe={currentLanguage.navbar.about_me}
         myProjects={currentLanguage.navbar.my_projects}
         contactMe={currentLanguage.navbar.contact_me}
-      />
+      /> */}
       <Header
         heading={currentLanguage.header.heading}
         subheading={currentLanguage.header.subheading}

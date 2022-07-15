@@ -49,8 +49,24 @@ textarea {
   width: 2rem;
 }
 
+.navbar-inline {
+  margin: 0 auto;
+  width: 90%
+}
+
+.navbar-inline ul {
+  display: flex;
+  /* text-align: center; */
+  list-style: none;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.navbar-inline a {
+  text-decoration: none;
+}
+
 .navbar {
-  display: none;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
@@ -58,6 +74,14 @@ textarea {
   top: 0;
   z-index: 98;
   padding-top: 5rem;
+}
+
+.navbar.closed {
+  display: none;
+}
+
+.navbar.open {
+  display: block;
 }
 
 .navbar a {
@@ -81,16 +105,15 @@ textarea {
   padding: 0.1em;
 }
 
-ul:last-child {
-  padding-bottom: 2em;
-}
-
 /* LANGUAGE SWICTCH */
 .language-switch {
   padding: 0.6em;
-  /* text-align: right; */
-  float: right;
-  margin-right: 4rem;
+  text-align: right;
+  width:90%;
+  margin: 0 auto;
+  /* float: right;*/
+  /* margin-right: 4rem; */
+  z-index: 9;
 }
 
 input[type="radio"] {
@@ -127,7 +150,8 @@ input[type="radio"]:checked + label {
 
 /* when setting max-width, text moves to one side */
 .greeting-header h1 {
-  padding: 0.7em 1em 0.3em 1em;
+  padding: 0.8rem;
+  margin: 0 auto;
 }
 
 /* ABOUT ME */
@@ -135,8 +159,6 @@ input[type="radio"]:checked + label {
   background-color: var(--indigo-dye-2);
   color: var(--baby-powder);
   box-sizing: border-box;
-  /* text-align: center; */
-  /* align-items: center */
 }
 
 .about-me-container-content {
