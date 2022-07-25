@@ -10,6 +10,7 @@ import AboutMe from "./components/AboutMe";
 import MyProjects from "./components/MyProjects";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
+import ToolsAndSkills from "./components/ToolsAndSkills";
 
 function App() {
   // changeLanguage should be a custom hook
@@ -34,19 +35,6 @@ function App() {
 
   return (
     <div>
-      {/* <div className="navbar-inline">
-        <ul>
-          <li>
-            <a href="#about-me">ABOUT ME</a>
-          </li>
-          <li>
-            <a href="#my-projects">MY PROJECTS</a>
-          </li>
-          <li>
-            <a href="#contact-me">CONTACT ME</a>
-          </li>
-        </ul>
-      </div> */}
       <div className="language-switch">
         {/* LANGUAGE SWITCH COMPONENT */}
         {/* language switch should also be on top of header section,
@@ -83,6 +71,7 @@ function App() {
         heading={currentLanguage.about_me.heading}
         general={currentLanguage.about_me.general}
       />
+      <ToolsAndSkills />
       <MyProjects
         heading={currentLanguage.my_projects.heading}
         projectList={projects}

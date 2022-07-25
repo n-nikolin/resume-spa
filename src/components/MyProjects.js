@@ -1,6 +1,11 @@
 import ProjectCard from "./ProjectCard";
 
 export default function MyProjects(props) {
+  function truncateString(string) {
+    const truncated = string.split(" ").slice(0, 10).join(" ") + "...";
+    return truncated;
+  }
+
   return (
     <div className="my-projects-container" id="my-projects">
       <h1>{props.heading}</h1>
@@ -11,7 +16,8 @@ export default function MyProjects(props) {
               <ProjectCard
                 id={project.id}
                 title={project.title}
-                description={project.description}
+                shortDescription={truncateString(project.description)}
+                longDescription={project.description}
               />
             </div>
           );

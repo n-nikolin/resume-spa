@@ -7,11 +7,11 @@
     },
     "header": {
       "heading": "Привет, я Никита",
-      "subheading": "это мой сайт/портфолио/резюме"
+      "subheading": "Это мой сайт/портфолио/резюме."
     },
     "about_me": {
-      "heading": "обо мне",
-      "general": "ну я это я. короче: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam excepturi culpa illum. Natus veritatis illo dolorum alias temporibus ut quaerat porro odio hic dolorem cum, saepe qui, nam fugit distinctio? Beatae est tempora dignissimos ex officiis quod quam et error quas, repudiandae excepturi possimus commodi mollitia rerum natus animi aliquam assumenda exercitationem. Aliquid, neque iure in eius hic expedita similique dolores fugiat culpa perspiciatis ipsum odio quos totam illum eveniet. Ex, tempore enim iste delectus, facilis reiciendis facere quidem ut molestias aliquam nulla asperiores ab magnam fugiat itaque! Eos culpa impedit possimus distinctio, voluptate quaerat accusamus odio praesentium accusantium nemo!"
+      "heading": "Обо мне",
+      "general": "Меня зовут Никита Николин, я начинающий разработчик.\n\nДва года назад я начал самостоятельно изучать Python по самоучителю (book_name). Со временем мой интерес только усиливался, и я решил, что хочу работать в ит.\n\nИзучив основы python, я перешел к изучению веб-фреймворков, sql, фронтенд-технологий, основ linux и технологий по контролю версий.\n\nЯ могу написать REST API, делать запросы в SQL и NoSQL, писать парсеры для документов и сайтов, написать интерфейс в React, связать фронт и бек при помощи fetch или axios."
     },
     "my_projects": {
       "heading": "мои проекты",
@@ -34,10 +34,10 @@
       ]
     },
     "contact_me": {
-      "heading": "Контактнуть",
+      "heading": "Оставить сообщение",
       "legend": {
-        "heading": "напиши мне",
-        "legend": "тут короче тоже лорем ипсум долор сит и тд и тп. так вот я еще не придумал, какой текст сюда вставить, но жолжно быть сколько_то слов или символов. наверное столько сойдет"
+        "heading": "Напиши мне",
+        "legend": "Если вы работодатель и хотите предложить мне работу, нашли баг или просто хотите оставить мне сообщение, то это можно сделать ниже.\nЯ вам обязательно отвечу"
       },
       "label": { "name": "Имя", "email": "Email", "message": "Сообщение" },
       "submit_btn": "Отправить"
@@ -67,19 +67,19 @@
         {
           "id": 0,
           "title": "ProjectName_0",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, provident!"
+          "description": "1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, provident!"
         },
 
         {
           "id": 1,
 
           "title": "ProjectName_1",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, provident!"
+          "description": "2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, provident!"
         },
         {
           "id": 2,
           "title": "ProjectName_2",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, provident!"
+          "description": "3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, provident!"
         }
       ]
     },

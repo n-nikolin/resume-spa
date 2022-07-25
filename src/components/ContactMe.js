@@ -47,7 +47,6 @@ export default function ContactMe(props) {
             id=""
             cols="30"
             rows="10"
-            placeholder="................"
           ></textarea>
           <button className="submit-btn" type="submit">
             {props.submitBtn}
