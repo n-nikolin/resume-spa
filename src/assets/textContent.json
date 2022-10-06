@@ -7,7 +7,7 @@
     },
     "header": {
       "heading": "Привет, я Никита",
-      "subheading": "Это мой сайт/портфолио/резюме."
+      "subheading": "Это мой сайт/портфолио/резюме\n(все еще в разработке)."
     },
     "about_me": {
       "heading": "Обо мне",
@@ -43,8 +43,8 @@
       "submit_btn": "Отправить"
     },
     "footer": {
-      "par_1": "тут футер какой_то я  пока не придумал, что тут писать бля залупа. очень не хочется придумывать такую хуйню",
-      "par_2": " хочу просто кодить, епта, а не заниматься всей этой хуйней. ну, внатуре, тут чисто каку с тренироовкамиЖ самое простое и понятное - потренироваться, а остальное пиздец трудно. спать вовремя, есть достаточно и тоже вовремя. пиздец. "
+      "par_1": "тут футер какой_то я  пока не придумал, что тут писать. очень не хочется придумывать",
+      "par_2": " хочу просто кодить, а не заниматься этим текстовым заполнением. ну, внатуре, тут чисто каку с тренироовкамиЖ самое простое и понятное - потренироваться, а остальное пиздец трудно. спать вовремя, есть достаточно и тоже вовремя. пиздец. "
     }
   },
   "en": {
@@ -54,15 +54,15 @@
       "contact_me": "contact me"
     },
     "header": {
-      "heading": "Just another Russian codemonkey",
-      "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit laudantium at, molestiae consectetur ratione molestias."
+      "heading": "Hi, my name is Nikita",
+      "subheading": "This is my site/portfolio/resume"
     },
     "about_me": {
       "heading": "About Me",
-      "general": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam excepturi culpa illum. Natus veritatis illo dolorum alias temporibus ut quaerat porro odio hic dolorem cum, saepe qui, nam fugit distinctio? Beatae est tempora dignissimos ex officiis quod quam et error quas, repudiandae excepturi possimus commodi mollitia rerum natus animi aliquam assumenda exercitationem. Aliquid, neque iure in eius hic expedita similique dolores fugiat culpa perspiciatis ipsum odio quos totam illum eveniet. Ex, tempore enim iste delectus, facilis reiciendis facere quidem ut molestias aliquam nulla asperiores ab magnam fugiat itaque! Eos culpa impedit possimus distinctio, voluptate quaerat accusamus odio praesentium accusantium nemo!"
+      "general": "Once again, hi, my name is Nikita Nikolin and I'm an aspiring software developer.\n\nTwo years ago I began my programming journey by learning Python through books (\"Python Crash Course\" by E. Matthes and \"Automate the Boring stuff with Python\" by Al Sweigart) and online tutorials.\n\n Although there's infinite things one can accomplish with Python I've decided to narrow things down to all things web. That's why I began expanding my knowledge beyond Python and its web-frameworks (Flask, Django) to other technologies (JS, HTML, CSS, SQL, Linux) in order to get a better understanding of how things are built and to make my own projects."
     },
     "my_projects": {
-      "heading": "мMy Projects",
+      "heading": "My Projects",
       "projects": [
         {
           "id": 0,

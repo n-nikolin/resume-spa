@@ -1,0 +1,46 @@
+import { useState, useEffect } from "react";
+// import { useLocalStorage } from "../hooks/useLocalStorage";
+import textContent from "../assets/textContent.json";
+
+function LanguageSwitch(props) {
+  const [isChecked, setIsChecked] = useState(props.checked);
+
+  const changeLanguage = () => {
+    if(isChecked==='ru'){setIsChecked('en')}
+    else if (isChecked==='en'){setIsChecked('ru')}
+    // this is a garbage way of handling this issue
+    // need to find another way 
+    window.location.reload(false);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("currentLanguage", JSON.stringify(isChecked));
+  }, [isChecked]);
+
+  return (
+    <div className="container">
+      <div className="language-switch">
+        <input
+          type="radio"
+          name="selected-language"
+          value="ru"
+          id="radio-ru"
+          onChange={changeLanguage}
+          checked={isChecked==="ru"}
+        />
+        <label htmlFor="ru">ru</label>
+        <input
+          type="radio"
+          name="selected-language"
+          value="en"
+          id="radio-en"
+          onChange={changeLanguage}
+          checked={isChecked==="en"}
+        />
+        <label htmlFor="en">en</label>
+      </div>
+    </div>
+  );
+}
+
+export default LanguageSwitch;
