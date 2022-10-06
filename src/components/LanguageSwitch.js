@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-// import { useLocalStorage } from "../hooks/useLocalStorage";
-import textContent from "../assets/textContent.json";
 
 function LanguageSwitch(props) {
   const [isChecked, setIsChecked] = useState(props.checked);
@@ -10,7 +8,7 @@ function LanguageSwitch(props) {
     else if (isChecked==='en'){setIsChecked('ru')}
     // this is a garbage way of handling this issue
     // need to find another way 
-    window.location.reload(false);
+    window.location.reload();
   };
 
   useEffect(() => {
