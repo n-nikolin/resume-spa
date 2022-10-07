@@ -1,8 +1,7 @@
 import React from "react";
 
 export default function Navbar(props) {
-  const navbar = props.navbar;
-  const menuItems = Object.entries(navbar).map(([key, value]) => (
+  const menuItems = Object.entries(props.navbar).map(([key, value]) => (
     <li key={key}>
       <a href={"#" + key}>{value}</a>
     </li>

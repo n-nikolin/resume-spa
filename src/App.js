@@ -4,6 +4,11 @@ import { useLocalStorage } from "./hooks/useLocalStorage";
 import textContent from "./assets/textContent.json";
 import LanguageSwitch from "./components/LanguageSwitch";
 import Navbar from './components/Navbar'
+import Header from "./components/Header";
+import AboutMe from "./components/AboutMe";
+import MyProjects from "./components/MyProjects";
+import ToolsAndSkills from "./components/ToolsAndSkills";
+import ContactMe from "./components/ContactMe";
 
 function App() {
   const [isChecked] = useLocalStorage("currentLanguage", "ru");
@@ -28,8 +33,12 @@ function App() {
   return (
     <div>
       <LanguageSwitch checked={isChecked} />
-      <Navbar navbar={currentLanguage.navbar}/>
-      <h1>{currentLanguage.header.heading}</h1>
+      <Navbar navbar={currentLanguage.navbar} />
+      <Header header={currentLanguage.header} />
+      <AboutMe aboutMe={currentLanguage.about_me}/>
+      <ToolsAndSkills />
+      <MyProjects myProjects={currentLanguage.my_projects}/>
+      <ContactMe contactMe={currentLanguage.contact_me} />
     </div>
   );
 }
