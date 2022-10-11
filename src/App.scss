@@ -1,0 +1,142 @@
+// make this sassy not vanilla css
+
+// fonts
+$font-stack: Montserrat, sans-serif;
+
+// colors
+$primary-color: black;
+$primary-light: rgb(233, 232, 231);
+$background-color: #2e5266ff;
+$section-background: #6e8898ff;
+$cadet-grey: #9fb1bcff; //what did I use this color for?
+$submit-button: #e2c044ff;
+
+// media queries
+$mobile: 700px;
+
+// general styling
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  font: 100% $font-stack;
+  color: $primary-light;
+  background-color: $background-color;
+  h1{
+    line-height: 2.5;
+  }
+  h2{
+    line-height: 2;
+  }
+  h2, h3, p{
+    margin-bottom: 0.5rem;
+  }
+}
+
+.navbar {
+  a {
+    text-decoration: none;
+    color: $primary-color;
+    &:hover {
+      color: $primary-light;
+    }
+  }
+}
+
+section {
+  width: 90%;
+  max-width: 80ch;
+  margin: 2rem auto;
+  background-color: $section-background;
+  border-radius: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.about-me {
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+    @media screen and (max-width: $mobile) {
+      display: block;
+      justify-content: space-around;
+      img {
+        float: right;
+        width: 15ch;
+        margin-left: 1ch;
+        // float: right;
+      }
+    }
+    img {
+      max-width: 25ch;
+      height: 100%;
+      border-radius: 50%;
+      outline: solid 2px $primary-light;
+    }
+    p {
+      margin: 0 auto;
+      text-align: justify;
+      max-width: 72ch;
+      padding-right: 1ch;
+    }
+  }
+}
+
+.contact-me {
+  max-width: 70ch;
+  form {
+    div {
+      width: 100%;
+      text-align: left;
+      margin: 0.3rem 0rem;
+    }
+    textarea,
+    input {
+      width: 80%;
+      border: none;
+      box-sizing: border-box;
+      border-radius: 0.3rem;
+      float: right;
+      padding: 0.1em 0.4em;
+      @media screen and (max-width:$mobile){
+        width: 100%;
+      }
+    }
+    textarea {
+      resize: none;
+      height: 10rem;
+      margin-bottom: 0.5rem;
+    }
+    legend {
+      text-align: justify;
+      h3{
+        text-align: center;
+      }
+    }
+    button {
+      display: block;
+      background-color: $submit-button;
+      color: $primary-light;
+      padding: 1rem;
+      border-radius: 1rem;
+      border: none;
+      width: 100%;
+      margin: 0 auto;
+      width: 80%;
+      margin-right: 0;
+      &:hover {
+        cursor: pointer;
+      }
+      @media screen and (max-width:$mobile){
+        width: 100%
+      }
+    }
+  }
+}

@@ -5,10 +5,10 @@ import React from 'react'
 
 export default function ToolsAndSkills(props) {
   return (
-    <div className="tools-and-skills" id="tools_and_skills">
+    <section className="tools-and-skills" id="tools_and_skills">
         <h2 className="tools-and-skills heading">TOOLS AND SKILLS</h2>
         <div className='tools-and-skills gallery'>ICONS</div>
         <div className='tools-and-skills content'>EDUCATION AND FOREIGN LANGUAGES</div>
-    </div>
+    </section>
   )
 }
