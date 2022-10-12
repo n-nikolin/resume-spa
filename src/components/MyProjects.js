@@ -10,19 +10,18 @@ export default function MyProjects(props) {
     <section className="my-projects" id="my_projects">
       <h2>{props.myProjects.heading}</h2>
       <div className="project-cards">
-      {props.myProjects.projects.map((project, index) => {
+        {props.myProjects.projects.map((project, index) => {
           return (
-            <div className="project-card" key={index}>
-              <ProjectCard
-                id={project.id}
-                title={project.title}
-                shortDescription={truncateString(project.description)}
-                longDescription={project.description}
-              />
-            </div>
+            <ProjectCard
+              key={index}
+              id={project.id}
+              title={project.title}
+              shortDescription={truncateString(project.description)}
+              longDescription={project.description}
+            />
           );
         })}
-        </div>
+      </div>
     </section>
   );
 }

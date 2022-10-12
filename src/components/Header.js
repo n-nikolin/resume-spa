@@ -5,7 +5,9 @@ export default function Header(props) {
     <section className='landing-header'>
         <header>
             <h1>{props.header.heading}</h1>
+            <div className="content">
             <h3>{props.header.subheading}</h3>
+            </div>
         </header>
     </section>
   )

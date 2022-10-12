@@ -1,15 +1,15 @@
-// make this sassy not vanilla css
-
 // fonts
 $font-stack: Montserrat, sans-serif;
 
+// TODO: play around a bit so it has more contrast
 // colors
 $primary-color: black;
 $primary-light: rgb(233, 232, 231);
 $background-color: #2e5266ff;
 $section-background: #6e8898ff;
-$cadet-grey: #9fb1bcff; //what did I use this color for?
+$content-background: #9fb1bcff; //what did I use this color for?
 $submit-button: #e2c044ff;
+$content-color: white;
 
 // media queries
 $mobile: 700px;
@@ -46,10 +46,29 @@ section {
   width: 90%;
   max-width: 80ch;
   margin: 2rem auto;
+  text-align: center;
   background-color: $section-background;
+}
+
+section,
+form,
+.content,
+.project-card,
+button,
+.gallery {
+  outline: $primary-light solid 2px;
   border-radius: 2rem;
   padding: 1rem;
-  text-align: center;
+  // try drop-shadow for fun
+  // filter: drop-shadow(0 0 0.15rem)
+}
+
+form,
+.content,
+.project-card,
+.gallery {
+  background-color: $content-background;
+  color: $content-color;
 }
 
 // styling react components
@@ -63,10 +82,34 @@ section {
   }
 }
 
+// make label sizes equal
+.language-switch {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  label{
+    padding: 1rem;
+  }
+  input[type="radio"] {
+    width: 0px;
+    opacity: 0;
+    & + label {
+      background-color: red;
+      border-radius: 0.5rem;
+    }
+    &:checked + label {
+      background-color: green;
+    }
+  }
+}
+
 .about-me {
   .content {
     display: flex;
     flex-direction: row-reverse;
+    background-color: $content-background;
+    border-radius: 2rem;
+    padding: 0.5em;
     @media screen and (max-width: $mobile) {
       display: block;
       justify-content: space-around;
@@ -91,13 +134,23 @@ section {
   }
 }
 
+.project-cards {
+  display: flex;
+  .project-card {
+    margin: 0.7rem;
+    border-radius: 2rem;
+    padding: 0.3rem;
+    min-width: 25%;
+  }
+  @media screen and (max-width: $mobile) {
+    display: block;
+  }
+}
+
 .contact-me {
   max-width: 70ch;
   form {
-    background-color: $cadet-grey;
-    border-radius: 2rem;
     padding: 0.5em;
-    color: white;
     div {
       width: 100%;
       text-align: left;
@@ -129,10 +182,8 @@ section {
     button {
       display: block;
       background-color: $submit-button;
-      color: $primary-light;
-      color: white;
+      color: $content-color;
       padding: 1rem;
-      border-radius: 1rem;
       border: none;
       width: 100%;
       margin: 0 auto;
@@ -145,20 +196,5 @@ section {
         width: 100%;
       }
     }
-  }
-}
-
-.project-cards {
-  display: flex;
-  .project-card {
-    background-color: $cadet-grey;
-    color: white;
-    margin: 0.7rem;
-    border-radius: 2rem;
-    padding: 0.3rem;
-    min-width: 25%;
-  }
-  @media screen and (max-width: $mobile){
-    display: block;
   }
 }

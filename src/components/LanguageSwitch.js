@@ -22,7 +22,7 @@ function LanguageSwitch(props) {
           type="radio"
           name="selected-language"
           value="ru"
-          id="radio-ru"
+          id="ru"
           onChange={changeLanguage}
           checked={isChecked==="ru"}
         />
@@ -31,7 +31,7 @@ function LanguageSwitch(props) {
           type="radio"
           name="selected-language"
           value="en"
-          id="radio-en"
+          id="en"
           onChange={changeLanguage}
           checked={isChecked==="en"}
         />
