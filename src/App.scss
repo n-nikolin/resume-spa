@@ -73,22 +73,59 @@ form,
 
 // styling react components
 .navbar {
-  a {
-    text-decoration: none;
-    color: $primary-color;
-    &:hover {
-      color: $primary-light;
+  button {
+    z-index:2;
+    // background-color: inherit;
+    border-radius: 0;
+    padding: 0;
+    // outline: none;
+    border-radius: 0.2rem;
+    border: none;
+    position: fixed;
+    right: 1rem;
+    top: 2rem;
+    cursor: pointer;
+    img {
+      width: 30px;
     }
   }
+  ul {
+    position: fixed;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.614);
+    height: 100vh;
+    width: 30vh;
+    right: 0;
+    top: 0;
+    padding-top: 4.5rem;
+    position: fixed;
+  }
+  li {
+    max-width: 15ch;
+    margin-left: 0.5rem;
+  }
+  a {
+    text-decoration: none;
+    color: $primary-light;
+    &:hover {
+      color: $content-color;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+#closed {
+  opacity: 0;
 }
 
 // make label sizes equal
 .language-switch {
   position: fixed;
-  right: 1rem;
-  top: 1rem;
+  right: 4rem;
+  top: 2rem;
+  z-index: 2;
   label {
-    padding: 1rem;
+    padding: 0.7rem;
     &:hover {
       cursor: pointer;
     }
