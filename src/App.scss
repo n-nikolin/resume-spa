@@ -76,7 +76,6 @@ form,
   button {
     z-index: 2;
     // background-color: inherit;
-    border-radius: 0;
     padding: 0;
     // outline: none;
     border-radius: 0.2rem;
@@ -146,6 +145,20 @@ form,
     &:checked + label {
       background-color: green;
     }
+  }
+}
+
+.scroll-to-top {
+  button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 2;
+    // background-color: inherit;
+    padding: 0;
+    // outline: none;
+    border-radius: 0.2rem;
+    border: none;
   }
 }
 

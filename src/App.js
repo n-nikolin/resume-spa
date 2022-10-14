@@ -12,6 +12,7 @@ import ToolsAndSkills from "./components/ToolsAndSkills";
 import ContactMe from "./components/ContactMe";
 
 import textContent from "./assets/textContent.json";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [isChecked] = useLocalStorage("currentLanguage", "ru");
@@ -35,6 +36,7 @@ function App() {
   return (
     <div>
       <LanguageSwitch checked={isChecked} />
+      <ScrollToTop />
       <Navbar navbar={currentLanguage.navbar} />
       <Header header={currentLanguage.header} />
       <AboutMe aboutMe={currentLanguage.about_me} />
