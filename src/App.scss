@@ -74,7 +74,7 @@ form,
 // styling react components
 .navbar {
   button {
-    z-index:2;
+    z-index: 2;
     // background-color: inherit;
     border-radius: 0;
     padding: 0;
@@ -105,8 +105,10 @@ form,
     margin-left: 0.5rem;
   }
   a {
+    display: block;
     text-decoration: none;
     color: $primary-light;
+    width: 100%;
     &:hover {
       color: $content-color;
       font-size: 1.2rem;
@@ -116,6 +118,10 @@ form,
 
 #closed {
   opacity: 0;
+}
+
+#open {
+  opacity: 1;
 }
 
 // make label sizes equal
