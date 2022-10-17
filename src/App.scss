@@ -116,11 +116,19 @@ form,
 }
 
 #closed {
-  opacity: 0;
+  display: none;
 }
 
 #open {
-  opacity: 1;
+  display: block;
+}
+
+.closed {
+  display: none;
+}
+
+.open {
+  display: block;
 }
 
 // make label sizes equal
@@ -203,6 +211,26 @@ form,
   }
   @media screen and (max-width: $mobile) {
     display: block;
+  }
+}
+
+.project-card-modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.614);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+  margin: 0 auto;
+  .content {
+    position: fixed;
+    text-align: justify;
+    max-width: 56ch;
+    margin: 0 auto;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
