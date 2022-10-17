@@ -18,7 +18,6 @@ export default function Navbar(props) {
     const closeNavbar = (e) => {
       // console.log(e.path[1].tagName);
       if (e.composedPath()[1] !== btnRef.current) {
-        console.log("gay");
         setIsOpen(false);
       }
     };

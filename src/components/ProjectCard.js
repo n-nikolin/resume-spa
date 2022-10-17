@@ -3,11 +3,11 @@ import ProjectCardModal from "./ProjectCardModal";
 
 export default function ProjectCard(props) {
   const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => {
+  const handleOpen = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="project-card" onClick={handleClick}>
+    <div className="project-card" onClick={handleOpen}>
       <h3>{props.title}</h3>
       <p>{props.shortDescription}</p>
       <ProjectCardModal
