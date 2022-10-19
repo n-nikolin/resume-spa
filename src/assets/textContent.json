@@ -12,13 +12,29 @@
     },
     "about_me": {
       "heading": "Обо мне",
-      "general": "Меня зовут Никита Николин, я начинающий разработчик.\n\nДва года назад я начал самостоятельно изучать Python по самоучителю (book_name). Со временем мой интерес только усиливался, и я решил, что хочу работать в ит.\n\nИзучив основы python, я перешел к изучению веб-фреймворков, sql, фронтенд-технологий, основ linux и технологий по контролю версий.\n\nЯ могу написать REST API, делать запросы в SQL и NoSQL, писать парсеры для документов и сайтов, написать интерфейс в React, связать фронт и бек при помощи fetch или axios."
+      "general": "Меня зовут Никита Николин, я начинающий разработчик.\nДва года назад я начал самостоятельно изучать Python по самоучителю (book_name). Со временем мой интерес только усиливался, и я решил, что хочу работать в ит.\nИзучив основы python, я перешел к изучению веб-фреймворков, sql, фронтенд-технологий, основ linux и технологий по контролю версий.\nЯ могу написать REST API, делать запросы в SQL и NoSQL, писать парсеры для документов и сайтов, написать интерфейс в React, связать фронт и бек при помощи fetch или axios."
     },
     "tools_and_skills": {
-      "heading": "Инструменты и навыки",
-      "education": {"university": "МГУ им. М.В. Ломоносова", "faculty": "Факультет иностранных языков и регионоведения", "specialty":"Культурология", "date":"2015-2019"},
-      "tools": [],
-      "skills": []
+      "tools": { "heading": "Инструменты и навыки" },
+      "skills": {
+        "heading": "Образование и иностранные языки",
+        "education": {
+          "heading": "Образование",
+          "university": "МГУ им. М.В. Ломоносова",
+          "faculty": "Факультет иностранных языков и регионоведения",
+          "specialty": "Культурология",
+          "degree": "Бакалавр",
+          "date": "2015-2019"
+        },
+        "foreign_languages": {
+          "heading": "Языки",
+          "languages": [
+            { "language": "Русский", "level": "носитель" },
+            { "language": "Английский", "level": "C2" },
+            { "language": "Немецкий", "level": "A2" }
+          ]
+        }
+      }
     },
     "my_projects": {
       "heading": "мои проекты",
@@ -67,13 +83,30 @@
     },
     "about_me": {
       "heading": "About Me",
-      "general": "Once again, hi, my name is Nikita Nikolin and I'm an aspiring software developer.\n\nTwo years ago I began my programming journey by learning Python through books (\"Python Crash Course\" by E. Matthes and \"Automate the Boring stuff with Python\" by Al Sweigart) and online tutorials.\n\n Although there's infinite things one can accomplish with Python I've decided to narrow things down to all things web. That's why I began expanding my knowledge beyond Python and its web-frameworks (Flask, Django) to other technologies (JS, HTML, CSS, SQL, Linux) in order to get a better understanding of how things are built and to make my own projects."
+      "general": "Once again, hi, my name is Nikita Nikolin and I'm an aspiring software developer.\nTwo years ago I began my programming journey by learning Python through books (\"Python Crash Course\" by E. Matthes and \"Automate the Boring stuff with Python\" by Al Sweigart) and online tutorials.\n Although there's infinite things one can accomplish with Python I've decided to narrow things down to all things web. That's why I began expanding my knowledge beyond Python and its web-frameworks (Flask, Django) to other technologies (JS, HTML, CSS, SQL, Linux) in order to get a better understanding of how things are built and to make my own projects."
     },
+
     "tools_and_skills": {
-      "heading": "",
-      "education": {"university": "Lomonosov Moscow State University", "faculty": "Foreign Languages and Area Studies", "specialty": "Culture Studies", "date":"2015-2019"},
-      "tools": [],
-      "skills": []
+      "tools": { "heading": "Tools and Skills" },
+      "skills": {
+        "heading": "Education and Foreign Languages",
+        "education": {
+          "heading": "Education",
+          "university": "Lomonosov Moscow State University",
+          "faculty": "Foreign Languages and Area Studies",
+          "specialty": "Culture Studies",
+          "date": "2015-2019",
+          "degree": "BA"
+        },
+        "foreign_languages": {
+          "heading": "Languages",
+          "languages": [
+            { "language": "Russian", "level": "native" },
+            { "language": "English", "level": "C2" },
+            { "language": "German", "level": "A2" }
+          ]
+        }
+      }
     },
     "my_projects": {
       "heading": "My Projects",

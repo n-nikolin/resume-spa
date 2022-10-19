@@ -4,7 +4,7 @@
 import { useEffect } from "react";
 import { useRef } from "react";
 import { useState } from "react";
-import hamburgerMenu from "../assets/hamburgerMenu.svg";
+import ui from "../assets/ui";
 
 export default function Navbar(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +37,7 @@ export default function Navbar(props) {
   return (
     <div className="navbar">
       <button onClick={toggleVisible} ref={btnRef}>
-        <img src={hamburgerMenu} alt="hamburger menu icon" />
+        <img src={ui.hamburgerMenu} alt="hamburger menu icon" />
       </button>
       <ul id={isOpen ? "open" : "closed"}>{menuItems}</ul>
     </div>

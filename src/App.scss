@@ -29,6 +29,7 @@ body {
   font: 100% $font-stack;
   color: $primary-light;
   background-color: $background-color;
+  white-space: break-spaces;
   h1 {
     line-height: 2.5;
   }
@@ -156,6 +157,7 @@ form,
     }
     &:checked + label {
       background-color: green;
+      cursor: default;
     }
   }
 }
@@ -257,13 +259,21 @@ form,
   }
   @media screen and (max-width: $mobile) {
     display: block;
-    .container{
+    .container {
       width: 70%;
       padding: 1rem;
-      .content{
+      .content {
         max-width: 100%;
       }
     }
+  }
+}
+
+.tools-and-skills {
+  img {
+    width: 4rem;
+    max-height: 4rem;
+    margin: 0.2rem;
   }
 }
 

@@ -40,7 +40,7 @@ function App() {
       <Navbar navbar={currentLanguage.navbar} />
       <Header header={currentLanguage.header} />
       <AboutMe aboutMe={currentLanguage.about_me} />
-      <ToolsAndSkills />
+      <ToolsAndSkills toolsAndSkills = {currentLanguage.tools_and_skills}/>
       <MyProjects myProjects={currentLanguage.my_projects} />
       <ContactMe contactMe={currentLanguage.contact_me} />
     </div>

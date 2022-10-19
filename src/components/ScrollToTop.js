@@ -1,4 +1,4 @@
-import upArrow from "../assets/arrow_up.svg";
+import ui from "../assets/ui";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -24,7 +24,7 @@ export default function ScrollToTop() {
             window.scrollTo({ top: 0, behaviour: "auto" });
           }}
         >
-          <img src={upArrow} alt="up chevron" />
+          <img src={ui.upArrow} alt="up chevron" />
         </button>
       )}
     </div>
