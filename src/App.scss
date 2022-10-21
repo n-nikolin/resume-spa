@@ -61,7 +61,7 @@ form,
 .project-card,
 button,
 .gallery {
-  outline: $primary-light solid 2px;
+  border: $primary-light solid 2px;
   border-radius: 2rem;
   padding: 1rem;
   // try drop-shadow for fun
@@ -238,7 +238,7 @@ form,
       .content {
         width: 50ch;
         max-height: 30ch;
-        scrollbar-width: 1px;
+        scrollbar-width: none;
         overflow-y: auto;
         overflow-x: hidden;
         &::-webkit-scrollbar {
