@@ -1,16 +1,16 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 
-export default function MyProjects(props) {
+export default function MyProjects({ myProjects }) {
   function truncateString(string) {
     const truncated = string.split(" ").slice(0, 10).join(" ") + "...";
     return truncated;
   }
   return (
     <section className="my-projects" id="my_projects">
-      <h2>{props.myProjects.heading}</h2>
+      <h2>{myProjects.heading}</h2>
       <div className="project-cards">
-        {props.myProjects.projects.map((project, index) => {
+        {myProjects.projects.map((project, index) => {
           return (
             <ProjectCard
               key={index}

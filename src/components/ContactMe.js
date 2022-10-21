@@ -1,34 +1,34 @@
 import React from "react";
 
-export default function ContactMe(props) {
+export default function ContactMe({contactMe}) {
   return (
     <section className="contact-me" id="contact_me">
-      <h2 className="contact-me heading">{props.contactMe.heading}</h2>
+      <h2 className="contact-me heading">{contactMe.heading}</h2>
       <form action="submit">
         <legend>
-          <h3>{props.contactMe.legend.heading}</h3>
-          <p>{props.contactMe.legend.legend}</p>
+          <h3>{contactMe.legend.heading}</h3>
+          <p>{contactMe.legend.legend}</p>
         </legend>
         <div>
           <label htmlFor="">
-            {props.contactMe.label.name}
+            {contactMe.label.name}
             <input type="text" />
           </label>
         </div>
         <div>
           <label htmlFor="">
-            {props.contactMe.label.email}
+            {contactMe.label.email}
             <input type="text" />
           </label>
         </div>
         <div>
           <label htmlFor="">
-            {props.contactMe.label.message}
+            {contactMe.label.message}
             <textarea />
           </label>
         </div>
         <div>
-        <button type="submit">{props.contactMe.submit_btn}</button>
+        <button type="submit">{contactMe.submit_btn}</button>
         </div>
       </form>
     </section>

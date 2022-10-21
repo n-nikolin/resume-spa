@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { useState } from "react";
 import ui from "../assets/ui";
 
-export default function Navbar(props) {
+export default function Navbar({ navbar }) {
   const [isOpen, setIsOpen] = useState(false);
   const btnRef = useRef();
 
@@ -28,7 +28,7 @@ export default function Navbar(props) {
     };
   }, []);
 
-  const menuItems = Object.entries(props.navbar).map(([key, value]) => (
+  const menuItems = Object.entries(navbar).map(([key, value]) => (
     <li key={key}>
       <a href={"#" + key}>{value}</a>
     </li>

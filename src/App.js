@@ -40,7 +40,13 @@ function App() {
       <Navbar navbar={currentLanguage.navbar} />
       <Header header={currentLanguage.header} />
       <AboutMe aboutMe={currentLanguage.about_me} />
-      <ToolsAndSkills toolsAndSkills = {currentLanguage.tools_and_skills}/>
+      <ToolsAndSkills
+        toolsAndSkills={currentLanguage.tools_and_skills}
+        toolsHeading={currentLanguage.tools_and_skills.tools.heading}
+        skillsHeading={currentLanguage.tools_and_skills.skills.heading}
+        education={currentLanguage.tools_and_skills.skills.education}
+        foreignLanguages={currentLanguage.tools_and_skills.skills.foreign_languages}
+      />
       <MyProjects myProjects={currentLanguage.my_projects} />
       <ContactMe contactMe={currentLanguage.contact_me} />
     </div>

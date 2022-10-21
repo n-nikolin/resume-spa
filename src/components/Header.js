@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function Header(props) {
+export default function Header({ header }) {
   return (
     <section className='landing-header'>
         <header>
-            <h1>{props.header.heading}</h1>
+            <h1>{header.heading}</h1>
             <div className="content">
-            <h3>{props.header.subheading}</h3>
+            <h3>{header.subheading}</h3>
             </div>
         </header>
     </section>

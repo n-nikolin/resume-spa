@@ -1,13 +1,13 @@
 import React from "react";
 import logo from "../assets/logo";
 
-export default function ToolsAndSkills({ toolsAndSkills }) {
-  const languagesList = toolsAndSkills.skills.foreign_languages.languages;
+export default function ToolsAndSkills({ toolsHeading, skillsHeading, education, foreignLanguages }) {
+  const languagesList = foreignLanguages.languages;
 
   return (
     <section className="tools-and-skills" id="tools_and_skills">
       <h2 className="tools-and-skills heading">
-        {toolsAndSkills.tools.heading}
+        {toolsHeading}
       </h2>
       <div>
         <div className="tools-and-skills gallery">
@@ -32,15 +32,15 @@ export default function ToolsAndSkills({ toolsAndSkills }) {
         </div>
       </div>
       <div>
-        <h2>{toolsAndSkills.skills.heading}</h2>
+        <h2>{skillsHeading}</h2>
         <div className="tools-and-skills content">
-          <h4>{toolsAndSkills.skills.education.heading}</h4>
-          <p>{toolsAndSkills.skills.education.university}</p>
-          <p>{toolsAndSkills.skills.education.faculty}</p>
-          <p>{toolsAndSkills.skills.education.specialty}</p>
-          <p>{toolsAndSkills.skills.education.date}</p>
-          <p>{toolsAndSkills.skills.education.degree}</p>
-          <h4>{toolsAndSkills.skills.foreign_languages.heading}</h4>
+          <h4>{education.heading}</h4>
+          <p>{education.university}</p>
+          <p>{education.faculty}</p>
+          <p>{education.specialty}</p>
+          <p>{education.date}</p>
+          <p>{education.degree}</p>
+          <h4>{foreignLanguages.heading}</h4>
           {languagesList.map((language, index) => {
             return (
               <p key={index}>
