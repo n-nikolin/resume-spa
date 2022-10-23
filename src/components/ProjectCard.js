@@ -5,13 +5,7 @@ export default function ProjectCard(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div
-      className="project-card"
-      onClick={() => {
-        setIsOpen(true);
-        console.log("m");
-      }}
-    >
+    <div className="project-card" onClick={() => setIsOpen(true)}>
       <h3>{props.title}</h3>
       <p>{props.shortDescription}</p>
       <ProjectCardModal
