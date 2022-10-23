@@ -16,7 +16,7 @@ export default function ProjectCardModal({
       onClick={() => setModalOpen(false)}
     >
       {console.log(modalOpen)}
-      <div className="container">
+      <div className="container" onClick={() => setModalOpen(false)}>
         <div className="content" onClick={(e) => e.stopPropagation()}>
           <button onClick={() => setModalOpen(false)}>
             <img src={ui.cross} alt="" />
