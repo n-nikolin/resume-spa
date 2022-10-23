@@ -63,7 +63,8 @@
         "legend": "Если вы работодатель и хотите предложить мне работу, нашли баг или просто хотите оставить мне сообщение, то это можно сделать ниже.\nЯ вам обязательно отвечу"
       },
       "label": { "name": "Имя", "email": "Email", "message": "Сообщение" },
-      "submit_btn": "Отправить"
+      "submit_btn": "Отправить",
+      "success_popup": "Сообщение отправлено!"
     },
     "footer": {
       "par_1": "тут футер какой_то я  пока не придумал, что тут писать. очень не хочется придумывать",
@@ -137,7 +138,8 @@
         "legend": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sit sunt maxime ex harum quam!"
       },
       "label": { "email": "Email", "message": "Message", "name": "Name" },
-      "submit_btn": "Submit"
+      "submit_btn": "Submit",
+      "success_popup": "YOur message has been sent!"
     },
     "footer": {
       "par_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas similique, dolorum praesentium modi nulla distinctio.",
