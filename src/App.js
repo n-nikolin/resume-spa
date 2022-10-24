@@ -3,7 +3,6 @@ import "./App.scss";
 
 import { useLocalStorage } from "./hooks/useLocalStorage";
 
-import LanguageSwitch from "./components/LanguageSwitch";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
@@ -35,9 +34,8 @@ function App() {
 
   return (
     <div>
-      <LanguageSwitch checked={isChecked} />
       <ScrollToTop />
-      <Navbar navbar={currentLanguage.navbar} />
+      <Navbar navbar={currentLanguage.navbar} checked={isChecked} />
       <Header header={currentLanguage.header} />
       <AboutMe aboutMe={currentLanguage.about_me} />
       <ToolsAndSkills

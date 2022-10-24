@@ -5,8 +5,9 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import { useState } from "react";
 import ui from "../assets/ui";
+import LanguageSwitch from "./LanguageSwitch";
 
-export default function Navbar({ navbar }) {
+export default function Navbar({ navbar, checked }) {
   const [isOpen, setIsOpen] = useState(false);
   const btnRef = useRef();
 
@@ -36,6 +37,7 @@ export default function Navbar({ navbar }) {
 
   return (
     <div className="navbar">
+      <LanguageSwitch checked={checked}/>
       <button onClick={toggleVisible} ref={btnRef}>
         <img src={ui.hamburgerMenu} alt="hamburger menu icon" />
       </button>

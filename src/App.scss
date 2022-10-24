@@ -11,6 +11,20 @@ $content-background: #9fb1bcff;
 $submit-button: #e2c044ff;
 $content-color: white;
 
+// dynamic classes and ids
+#closed {
+  display: none;
+}
+#open {
+  display: block;
+}
+.closed {
+  display: none;
+}
+.open {
+  display: block;
+}
+
 // media queries
 $mobile: 700px;
 
@@ -78,22 +92,26 @@ form,
 
 // styling react components
 .navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
   button {
     z-index: 2;
     // background-color: inherit;
     padding: 0;
     // outline: none;
-    border-radius: 0.2rem;
     border: none;
-    position: fixed;
-    right: 1rem;
-    top: 2rem;
+    border-radius: 0.5rem;
     cursor: pointer;
+    margin-left: 1rem;
     img {
-      width: 30px;
+      width: 2.2rem;
     }
   }
   ul {
+    z-index: 1;
     position: fixed;
     list-style: none;
     background-color: rgba(0, 0, 0, 0.614);
@@ -120,30 +138,12 @@ form,
   }
 }
 
-#closed {
-  display: none;
-}
-
-#open {
-  display: block;
-}
-
-.closed {
-  display: none;
-}
-
-.open {
-  display: block;
-}
-
 // make label sizes equal
 .language-switch {
-  position: fixed;
-  right: 4rem;
-  top: 2rem;
-  z-index: 2;
+  z-index: 99;
   label {
     padding: 0.7rem;
+    border-radius: 0.5rem;
     &:hover {
       cursor: pointer;
     }
@@ -153,7 +153,6 @@ form,
     opacity: 0;
     & + label {
       background-color: red;
-      border-radius: 0.5rem;
     }
     &:checked + label {
       background-color: green;
@@ -328,9 +327,9 @@ form,
     }
   }
 
-  .success-popup{
-    position:fixed;
-    top:40%;
+  .success-popup {
+    position: fixed;
+    top: 40%;
     transform: translateX(-50%);
     left: 50%;
   }

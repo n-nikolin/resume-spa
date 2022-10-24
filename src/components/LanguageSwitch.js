@@ -19,27 +19,25 @@ function LanguageSwitch(props) {
   }, [isChecked]);
 
   return (
-    <div className="container">
-      <div className="language-switch">
-        <input
-          type="radio"
-          name="selected-language"
-          value="ru"
-          id="ru"
-          onChange={changeLanguage}
-          checked={isChecked === "ru"}
-        />
-        <label htmlFor="ru">ru</label>
-        <input
-          type="radio"
-          name="selected-language"
-          value="en"
-          id="en"
-          onChange={changeLanguage}
-          checked={isChecked === "en"}
-        />
-        <label htmlFor="en">en</label>
-      </div>
+    <div className="language-switch">
+      <input
+        type="radio"
+        name="selected-language"
+        value="ru"
+        id="ru"
+        onChange={changeLanguage}
+        checked={isChecked === "ru"}
+      />
+      <label htmlFor="ru">ru</label>
+      <input
+        type="radio"
+        name="selected-language"
+        value="en"
+        id="en"
+        onChange={changeLanguage}
+        checked={isChecked === "en"}
+      />
+      <label htmlFor="en">en</label>
     </div>
   );
 }
