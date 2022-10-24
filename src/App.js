@@ -17,6 +17,9 @@ function App() {
   const [isChecked] = useLocalStorage("currentLanguage", "ru");
   const [currentLanguage, setCurrentLanguage] = useState(textContent.ru);
 
+  useEffect(()=>{
+    document.title=currentLanguage.header.heading
+  })
   // would probably be a good idea to try and rewrite this as context
   // and put into separate hook or something like that
   useEffect(() => {
@@ -32,6 +35,7 @@ function App() {
     }
   }, [currentLanguage, isChecked]);
 
+
   return (
     <div>
       <ScrollToTop />
@@ -39,7 +43,6 @@ function App() {
       <Header header={currentLanguage.header} />
       <AboutMe aboutMe={currentLanguage.about_me} />
       <ToolsAndSkills
-        toolsAndSkills={currentLanguage.tools_and_skills}
         toolsHeading={currentLanguage.tools_and_skills.tools.heading}
         skillsHeading={currentLanguage.tools_and_skills.skills.heading}
         education={currentLanguage.tools_and_skills.skills.education}
