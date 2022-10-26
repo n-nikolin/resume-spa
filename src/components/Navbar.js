@@ -7,7 +7,7 @@ import { useState } from "react";
 import ui from "../assets/ui";
 import LanguageSwitch from "./LanguageSwitch";
 
-export default function Navbar({ navbar, checked }) {
+export default function Navbar({ navbar, isChecked, setIsChecked }) {
   const [isOpen, setIsOpen] = useState(false);
   const btnRef = useRef();
 
@@ -37,7 +37,7 @@ export default function Navbar({ navbar, checked }) {
 
   return (
     <div className="navbar">
-      <LanguageSwitch checked={checked}/>
+      <LanguageSwitch isChecked={isChecked} setIsChecked={setIsChecked} />
       <button onClick={toggleVisible} ref={btnRef}>
         <img src={ui.hamburgerMenu} alt="hamburger menu icon" />
       </button>

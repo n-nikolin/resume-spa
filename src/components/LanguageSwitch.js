@@ -1,22 +1,7 @@
-import { useState, useEffect } from "react";
-
-function LanguageSwitch(props) {
-  const [isChecked, setIsChecked] = useState(props.checked);
-
-  const changeLanguage = () => {
-    if (isChecked === "ru") {
-      setIsChecked("en");
-    } else if (isChecked === "en") {
-      setIsChecked("ru");
-    }
-    // this is a garbage way of handling this issue
-    // need to find another way
-    window.location.reload();
+function LanguageSwitch({ isChecked, setIsChecked }) {
+  const handleChange = (e) => {
+    setIsChecked(e.target.value);
   };
-
-  useEffect(() => {
-    localStorage.setItem("currentLanguage", JSON.stringify(isChecked));
-  }, [isChecked]);
 
   return (
     <div className="language-switch">
@@ -25,7 +10,7 @@ function LanguageSwitch(props) {
         name="selected-language"
         value="ru"
         id="ru"
-        onChange={changeLanguage}
+        onChange={handleChange}
         checked={isChecked === "ru"}
       />
       <label htmlFor="ru">ru</label>
@@ -34,7 +19,7 @@ function LanguageSwitch(props) {
         name="selected-language"
         value="en"
         id="en"
-        onChange={changeLanguage}
+        onChange={handleChange}
         checked={isChecked === "en"}
       />
       <label htmlFor="en">en</label>

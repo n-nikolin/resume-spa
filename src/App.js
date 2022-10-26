@@ -14,12 +14,12 @@ import textContent from "./assets/textContent.json";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-  const [isChecked] = useLocalStorage("currentLanguage", "ru");
+  const [isChecked, setIsChecked] = useLocalStorage("currentLanguage", "ru");
   const [currentLanguage, setCurrentLanguage] = useState(textContent.ru);
 
-  useEffect(()=>{
-    document.title=currentLanguage.header.heading
-  })
+  useEffect(() => {
+    document.title = currentLanguage.header.heading;
+  });
   // would probably be a good idea to try and rewrite this as context
   // and put into separate hook or something like that
   useEffect(() => {
@@ -35,18 +35,23 @@ function App() {
     }
   }, [currentLanguage, isChecked]);
 
-
   return (
     <div>
       <ScrollToTop />
-      <Navbar navbar={currentLanguage.navbar} checked={isChecked} />
+      <Navbar
+        navbar={currentLanguage.navbar}
+        isChecked={isChecked}
+        setIsChecked={setIsChecked}
+      />
       <Header header={currentLanguage.header} />
       <AboutMe aboutMe={currentLanguage.about_me} />
       <ToolsAndSkills
         toolsHeading={currentLanguage.tools_and_skills.tools.heading}
         skillsHeading={currentLanguage.tools_and_skills.skills.heading}
         education={currentLanguage.tools_and_skills.skills.education}
-        foreignLanguages={currentLanguage.tools_and_skills.skills.foreign_languages}
+        foreignLanguages={
+          currentLanguage.tools_and_skills.skills.foreign_languages
+        }
       />
       <MyProjects myProjects={currentLanguage.my_projects} />
       <ContactMe contactMe={currentLanguage.contact_me} />
