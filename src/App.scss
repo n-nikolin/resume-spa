@@ -126,11 +126,12 @@ form,
     max-width: 15ch;
     margin-left: 0.5rem;
   }
-  a {
+  p {
     display: block;
     text-decoration: none;
     color: $primary-light;
     width: 100%;
+    cursor: pointer;
     &:hover {
       color: $content-color;
       font-size: 1.2rem;

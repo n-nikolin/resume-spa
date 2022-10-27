@@ -1,6 +1,3 @@
-// TODO: make navbar visibility toggleable
-// by adding and removing element ids or classes
-
 import { useEffect } from "react";
 import { useRef } from "react";
 import { useState } from "react";
@@ -15,9 +12,15 @@ export default function Navbar({ navbar, isChecked, setIsChecked }) {
     setIsOpen(!isOpen);
   };
 
+  const handleScroll = (key) =>{
+    // TODO: try adding animations and making it smooth
+    document.getElementById(key).scrollIntoView(true)
+  }
+
   useEffect(() => {
     const closeNavbar = (e) => {
       // console.log(e.path[1].tagName);
+      // TODO: navbar should stay open when clicking on language switch
       if (e.composedPath()[1] !== btnRef.current) {
         setIsOpen(false);
       }
@@ -31,7 +34,7 @@ export default function Navbar({ navbar, isChecked, setIsChecked }) {
 
   const menuItems = Object.entries(navbar).map(([key, value]) => (
     <li key={key}>
-      <a href={"#" + key}>{value}</a>
+      <p onClick={()=>handleScroll(key)}>{value}</p>
     </li>
   ));
 
