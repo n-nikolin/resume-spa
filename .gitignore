@@ -2,6 +2,7 @@
 # some other stuff
 /snip
 .env
+/github-api
 
 # dependencies
 /node_modules

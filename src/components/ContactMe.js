@@ -1,4 +1,5 @@
 // TODO: try to clear form when message has been sent
+// TODO: add animetion while waiting for response
 
 import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
@@ -6,6 +7,7 @@ import emailjs from "@emailjs/browser";
 export default function ContactMe({ contactMe }) {
   const form = useRef();
   const [isMessageSent, setIsMessageSent] = useState(false);
+  const [disable, setDisable] = useState(false);
   const [messageForm, setMessageForm] = useState({
     user_name: "",
     email: "",
@@ -18,9 +20,8 @@ export default function ContactMe({ contactMe }) {
       [e.target.name]: e.target.value,
     });
   };
-
+  // TODO: separate function concerns
   const sendEmail = (e) => {
-    setIsMessageSent(true);
     e.preventDefault();
     emailjs
       .sendForm(
@@ -32,6 +33,8 @@ export default function ContactMe({ contactMe }) {
       .then(
         (result) => {
           console.log(result.text);
+          setDisable(true);
+          setIsMessageSent(true);
         },
         (error) => {
           console.log(error.text);
@@ -89,7 +92,13 @@ export default function ContactMe({ contactMe }) {
           </label>
         </div>
         <div>
-          <button type="submit">{contactMe.submit_btn}</button>
+          <button
+            type="submit"
+            disabled={disable}
+            className={disable === true ? "disabled" : null}
+          >
+            {contactMe.submit_btn}
+          </button>
         </div>
       </form>
       {isMessageSent && (

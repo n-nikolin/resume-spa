@@ -21,7 +21,8 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={() => {
-            window.scrollTo({ top: 0, behaviour: "auto" });
+            // for some reason behavior: "smooth" doesn't work
+            window.scrollTo({ top: 0 });
           }}
         >
           <img src={ui.upArrow} alt="up chevron" />

@@ -12,10 +12,16 @@ export default function Navbar({ navbar, isChecked, setIsChecked }) {
     setIsOpen(!isOpen);
   };
 
-  const handleScroll = (key) =>{
+  const handleScroll = (key) => {
     // TODO: try adding animations and making it smooth
-    document.getElementById(key).scrollIntoView(true)
-  }
+    document
+      .getElementById(key)
+      .scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+  };
 
   useEffect(() => {
     const closeNavbar = (e) => {
@@ -34,7 +40,7 @@ export default function Navbar({ navbar, isChecked, setIsChecked }) {
 
   const menuItems = Object.entries(navbar).map(([key, value]) => (
     <li key={key}>
-      <p onClick={()=>handleScroll(key)}>{value}</p>
+      <p onClick={() => handleScroll(key)}>{value}</p>
     </li>
   ));
 

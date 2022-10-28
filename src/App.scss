@@ -33,6 +33,7 @@ $mobile: 700px;
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  scroll-behavior: smooth;
   &::before,
   &::after {
     box-sizing: border-box;
@@ -294,11 +295,16 @@ form,
       border-radius: 0.3rem;
       float: right;
       padding: 0.1em 0.4em;
+      font-size: inherit;
+      font-weight: inherit;
+      text-decoration: none;
+      font-family: inherit;
       @media screen and (max-width: $mobile) {
         width: 100%;
       }
     }
     textarea {
+      color: $primary-color;
       resize: none;
       height: 10rem;
       margin-bottom: 0.5rem;
@@ -325,6 +331,10 @@ form,
       @media screen and (max-width: $mobile) {
         width: 100%;
       }
+    }
+    .disabled {
+      pointer-events: none;
+      background-color: red;
     }
   }
 
