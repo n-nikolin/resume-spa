@@ -139,7 +139,7 @@
       },
       "label": { "email": "Email", "message": "Message", "name": "Name" },
       "submit_btn": "Submit",
-      "success_popup": "YOur message has been sent!"
+      "success_popup": "Your message has been sent!"
     },
     "footer": {
       "par_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas similique, dolorum praesentium modi nulla distinctio.",

@@ -7,7 +7,7 @@ import emailjs from "@emailjs/browser";
 export default function ContactMe({ contactMe }) {
   const form = useRef();
   const [isMessageSent, setIsMessageSent] = useState(false);
-  const [disable, setDisable] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [messageForm, setMessageForm] = useState({
     user_name: "",
     email: "",
@@ -30,11 +30,12 @@ export default function ContactMe({ contactMe }) {
         form.current,
         process.env.REACT_APP_PUBLIC_ID
       )
+      .then(setIsSending(true))
       .then(
         (result) => {
           console.log(result.text);
-          setDisable(true);
           setIsMessageSent(true);
+          setIsSending(false);
         },
         (error) => {
           console.log(error.text);
@@ -54,7 +55,12 @@ export default function ContactMe({ contactMe }) {
   return (
     <section className="contact-me" id="contact_me">
       <h2 className="contact-me heading">{contactMe.heading}</h2>
-      <form ref={form} onSubmit={sendEmail}>
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        sending={isSending}
+        className={isSending === true ? "disabled" : null}
+      >
         <legend>
           <h3>{contactMe.legend.heading}</h3>
           <p>{contactMe.legend.legend}</p>
@@ -92,15 +98,10 @@ export default function ContactMe({ contactMe }) {
           </label>
         </div>
         <div>
-          <button
-            type="submit"
-            disabled={disable}
-            className={disable === true ? "disabled" : null}
-          >
-            {contactMe.submit_btn}
-          </button>
+          <button type="submit">{contactMe.submit_btn}</button>
         </div>
       </form>
+      {isSending && <div className="success-popup content loader"></div>}
       {isMessageSent && (
         <div className="success-popup content">
           <h3>{contactMe.success_popup}</h3>

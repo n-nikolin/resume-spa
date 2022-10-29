@@ -280,6 +280,7 @@ form,
 
 .contact-me {
   max-width: 70ch;
+  display: grid;
   form {
     padding: 0.5em;
     div {
@@ -332,9 +333,16 @@ form,
         width: 100%;
       }
     }
-    .disabled {
-      pointer-events: none;
-      background-color: red;
+  }
+
+  .disabled {
+    pointer-events: none;
+    textarea, input {
+      background-color: $content-background;
+      border: $primary-light solid 2px;
+    }
+    button{
+      background-color: rgb(221, 206, 151);
     }
   }
 
@@ -343,5 +351,22 @@ form,
     top: 40%;
     transform: translateX(-50%);
     left: 50%;
+  }
+  .loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 0.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
