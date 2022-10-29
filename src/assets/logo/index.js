@@ -8,6 +8,10 @@ import psql from "./postgresql.svg";
 import python from "./python.svg";
 import react from "./react.svg";
 import ubuntu from "./ubuntu.svg";
+import sass from './sass.svg'
+import postman from './postman.svg'
+import git from './git.svg'
+
 
 const logo = {
   css,
@@ -20,6 +24,9 @@ const logo = {
   python,
   react,
   ubuntu,
+  sass,
+  postman,
+  git
 };
 
 export default logo;

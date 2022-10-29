@@ -271,10 +271,60 @@ form,
 }
 
 .tools-and-skills {
-  img {
-    width: 4rem;
-    max-height: 4rem;
-    margin: 0.2rem;
+  .gallery {
+    div {
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 0 auto;
+      h4 {
+        width: 9ch;
+        text-align: left;
+      }
+      img {
+        width: 4rem;
+        max-height: 4rem;
+        margin: 0.2rem;
+      }
+    }
+    @media screen and (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      div {
+        display: block;
+        width: 100%;
+        h4 {
+          margin: 0 auto;
+          text-align: center;
+        }
+        img {
+          width: 3.2rem;
+          max-height: 4rem;
+          margin: 0.2rem;
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    div {
+      width: 30%;
+      text-align: left;
+      margin: 0 auto;
+      span {
+        display: inline-block;
+        margin-right: 1ch;
+      }
+    }
+    @media screen and (max-width: $mobile) {
+      display: block;
+      div {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -337,11 +387,12 @@ form,
 
   .disabled {
     pointer-events: none;
-    textarea, input {
+    textarea,
+    input {
       background-color: $content-background;
       border: $primary-light solid 2px;
     }
-    button{
+    button {
       background-color: rgb(221, 206, 151);
     }
   }

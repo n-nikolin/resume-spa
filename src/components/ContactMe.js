@@ -58,7 +58,7 @@ export default function ContactMe({ contactMe }) {
       <form
         ref={form}
         onSubmit={sendEmail}
-        sending={isSending}
+        sending={isSending.toString()}
         className={isSending === true ? "disabled" : null}
       >
         <legend>
