@@ -101,7 +101,11 @@ export default function ContactMe({ contactMe }) {
           <button type="submit">{contactMe.submit_btn}</button>
         </div>
       </form>
-      {isSending && <div className="success-popup content loader"></div>}
+      {isSending && (
+        <div className="success-popup content">
+          <div className="loader"></div>
+        </div>
+      )}
       {isMessageSent && (
         <div className="success-popup content">
           <h3>{contactMe.success_popup}</h3>

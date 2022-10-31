@@ -16,24 +16,36 @@ export default function ToolsAndSkills({
         <div className="tools-and-skills gallery">
           <div>
             <h4>backend</h4>
-            <img src={logo.python} alt="" />
-            <img src={logo.django} alt="" />
-            <img src={logo.flask} alt="" />
-            <img src={logo.psql} alt="" />
+            <div>
+              <img src={logo.python} alt="" />
+              <img src={logo.django} alt="" />
+              <img src={logo.flask} alt="" />
+              <img src={logo.psql} alt="" />
+            </div>
           </div>
           <div>
             <h4>frontend</h4>
-            <img src={logo.js} alt="" />
-            <img src={logo.html} alt="" />
-            <img src={logo.css} alt="" />
-            <img src={logo.react} alt="" />
-            <img src={logo.sass} alt="" />
+            <div>
+              <img src={logo.js} alt="" />
+              <img src={logo.js} alt="" />
+              <img src={logo.js} alt="" />
+              <img src={logo.js} alt="" />
+              <img src={logo.js} alt="" />
+              <img src={logo.js} alt="" />
+              <img src={logo.js} alt="" />
+              <img src={logo.js} alt="" />
+              <img src={logo.html} alt="" />
+              <img src={logo.css} alt="" />
+              <img src={logo.react} alt="" />
+            </div>
           </div>
           <div>
             <h4>other</h4>
-            <img src={logo.ubuntu} alt="" />
-            <img src={logo.postman} alt="" />
-            <img src={logo.git} alt="" />
+            <div>
+              <img src={logo.ubuntu} alt="" />
+              <img src={logo.postman} alt="" />
+              <img src={logo.git} alt="" />
+            </div>
           </div>
         </div>
       </div>
