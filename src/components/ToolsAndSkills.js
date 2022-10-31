@@ -12,40 +12,27 @@ export default function ToolsAndSkills({
   return (
     <section className="tools-and-skills" id="tools_and_skills">
       <h2 className="tools-and-skills heading">{toolsHeading}</h2>
-      <div>
+      <div className="tools-and-skills wrapper">
         <div className="tools-and-skills gallery">
+          <h4>backend</h4>
           <div>
-            <h4>backend</h4>
-            <div>
-              <img src={logo.python} alt="" />
-              <img src={logo.django} alt="" />
-              <img src={logo.flask} alt="" />
-              <img src={logo.psql} alt="" />
-            </div>
+            <img src={logo.python} alt="" />
+            <img src={logo.django} alt="" />
+            <img src={logo.flask} alt="" />
+            <img src={logo.psql} alt="" />
           </div>
+          <h4>frontend</h4>
           <div>
-            <h4>frontend</h4>
-            <div>
-              <img src={logo.js} alt="" />
-              <img src={logo.js} alt="" />
-              <img src={logo.js} alt="" />
-              <img src={logo.js} alt="" />
-              <img src={logo.js} alt="" />
-              <img src={logo.js} alt="" />
-              <img src={logo.js} alt="" />
-              <img src={logo.js} alt="" />
-              <img src={logo.html} alt="" />
-              <img src={logo.css} alt="" />
-              <img src={logo.react} alt="" />
-            </div>
+            <img src={logo.js} alt="" />
+            <img src={logo.html} alt="" />
+            <img src={logo.css} alt="" />
+            <img src={logo.react} alt="" />
           </div>
+          <h4>other</h4>
           <div>
-            <h4>other</h4>
-            <div>
-              <img src={logo.ubuntu} alt="" />
-              <img src={logo.postman} alt="" />
-              <img src={logo.git} alt="" />
-            </div>
+            <img src={logo.ubuntu} alt="" />
+            <img src={logo.postman} alt="" />
+            <img src={logo.git} alt="" />
           </div>
         </div>
       </div>
