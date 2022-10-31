@@ -140,7 +140,6 @@ form,
   }
 }
 
-// make label sizes equal
 .language-switch {
   z-index: 99;
   label {
@@ -164,16 +163,17 @@ form,
 }
 
 .scroll-to-top {
+  bottom: 1rem;
+  right: 1rem;
+  position: fixed;
+  z-index: 2;
   button {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 2;
-    // background-color: inherit;
-    padding: 0;
-    // outline: none;
-    border-radius: 0.2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
     border: none;
+    img {
+      scale: 1.5;
+    }
   }
 }
 
@@ -214,10 +214,10 @@ form,
   flex-wrap: wrap;
   justify-content: space-around;
   .project-card {
-    margin: 0.7rem;
+    margin: 0.3rem;
     border-radius: 2rem;
-    padding: 0.3rem;
-    width: 26%;
+    padding: 1rem;
+    width: 25%;
     cursor: pointer;
   }
   .project-card-modal {
@@ -279,7 +279,7 @@ form,
 }
 
 .tools-and-skills {
-  .wrapper{
+  .wrapper {
     display: flex;
     flex-direction: column;
     background-color: #9fb1bcff;

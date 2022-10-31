@@ -14,13 +14,11 @@ export default function Navbar({ navbar, isChecked, setIsChecked }) {
 
   const handleScroll = (key) => {
     // TODO: try adding animations and making it smooth
-    document
-      .getElementById(key)
-      .scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
+    document.getElementById(key).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
   };
 
   useEffect(() => {

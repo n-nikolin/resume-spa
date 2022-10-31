@@ -43,16 +43,18 @@ export default function ToolsAndSkills({
             <h4>{education.heading}</h4>
             <span>{education.university}</span>
             <span>{education.faculty}</span>
-            <span>{education.specialty}</span>
-            <span>{education.date}</span>
-            <span>{education.degree}</span>
+            <b>
+              <span>{education.specialty}</span>
+              <span>{education.date}</span>
+              <span>{education.degree}</span>
+            </b>
           </div>
           <div>
             <h4>{foreignLanguages.heading}</h4>
             {languagesList.map((language, index) => {
               return (
                 <p key={index}>
-                  {language.language} {language.level}
+                  {language.language} <b>{language.level}</b>
                 </p>
               );
             })}
