@@ -179,21 +179,13 @@ form,
 
 .about-me {
   .content {
-    display: flex;
-    flex-direction: row-reverse;
+    // display: flex;
+    // flex-direction: row-reverse;
     background-color: $content-background;
     border-radius: 2rem;
     padding: 0.5em;
-    @media screen and (max-width: $mobile) {
-      display: block;
-      justify-content: space-around;
-      img {
-        float: right;
-        width: 15ch;
-        margin-left: 1ch;
-      }
-    }
     img {
+      float: right;
       max-width: 25ch;
       height: 100%;
       border-radius: 50%;
@@ -204,6 +196,14 @@ form,
       text-align: justify;
       max-width: 72ch;
       padding-right: 1ch;
+    }
+    @media screen and (max-width: $mobile) {
+      display: block;
+      justify-content: space-around;
+      img {
+        width: 15ch;
+        margin-left: 1ch;
+      }
     }
   }
 }
@@ -291,6 +291,8 @@ form,
     column-gap: 1rem;
     width: fit-content;
     h4 {
+      width: 7ch;
+      margin-left: 0;
       text-align: left;
       margin: auto;
       grid-column: 1/2;
@@ -310,19 +312,17 @@ form,
       flex-direction: column;
       div {
         display: block;
-        width: 100%;
-        h4 {
-          margin: 0 auto;
-          text-align: center;
-        }
-        img {
-          width: 4rem;
-          max-height: 4rem;
-          margin: 0.2rem;
+        justify-content: center;
+        img{
+         width: 4rem;
+         height: 4rem;
+         margin:0.2rem
+
         }
       }
     }
   }
+
   .content {
     display: flex;
     flex-direction: row;

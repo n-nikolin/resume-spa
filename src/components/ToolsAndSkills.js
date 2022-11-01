@@ -27,6 +27,7 @@ export default function ToolsAndSkills({
             <img src={logo.html} alt="" />
             <img src={logo.css} alt="" />
             <img src={logo.react} alt="" />
+            <img src={logo.sass} alt="" />
           </div>
           <h4>other</h4>
           <div>
