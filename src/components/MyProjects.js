@@ -37,6 +37,8 @@ export default function MyProjects({ myProjects }) {
               title={project.title}
               shortDescription={truncateString(project.description)}
               longDescription={project.description}
+              langUrl={project.languages_url}
+              repoUrl={project.repo_url}
             />
           );
         })}

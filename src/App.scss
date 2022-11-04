@@ -259,6 +259,55 @@ form,
           margin-right: 1rem;
           margin-top: 1rem;
         }
+        ul {
+          width: 90%;
+          display: inline-block;
+          padding: 0.5rem;
+          column-count: 2;
+          li {
+            font-size: 1rem;
+            list-style: none;
+          }
+          .circle {
+            display: inline-block;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+          }
+        }
+        .progress-bar {
+          width: 90%;
+          font-size: 0;
+          border-radius: 10px;
+          overflow: hidden;
+          span {
+            display: inline-block;
+            height: 10px;
+          }
+        }
+        #python {
+          background-color: rgb(53, 114, 165);
+        }
+
+        #javascript {
+          background-color: rgb(241, 224, 90);
+        }
+
+        #css {
+          background-color: rgb(86, 61, 124);
+        }
+
+        #html {
+          background-color: rgb(227, 76, 38);
+        }
+
+        #scss {
+          background-color: rgb(198, 83, 140);
+        }
+
+        #batchfile {
+          background-color: rgb(193, 241, 46);
+        }
       }
     }
   }
@@ -314,11 +363,10 @@ form,
       div {
         display: block;
         justify-content: center;
-        img{
-         width: 4rem;
-         height: 4rem;
-         margin:0.2rem
-
+        img {
+          width: 4rem;
+          height: 4rem;
+          margin: 0.2rem;
         }
       }
     }

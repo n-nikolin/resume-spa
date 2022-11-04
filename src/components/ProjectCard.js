@@ -24,6 +24,8 @@ export default function ProjectCard(props) {
         title={props.title}
         description={props.longDescription}
         modalOpen={isOpen}
+        langUrl={props.langUrl}
+        repoUrl={props.repoUrl}
         setModalOpen={setIsOpen}
       />
     </div>

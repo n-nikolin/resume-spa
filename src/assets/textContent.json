@@ -8,11 +8,12 @@
     },
     "header": {
       "heading": "Привет, я Никита",
-      "subheading": "Это мой сайт/портфолио/резюме\n(все еще в разработке)."
+      "subheading": "Это мой сайт/портфолио/резюме\n(все еще в разработке).\nДля следующей итерации напишу бэкенд."
     },
     "about_me": {
       "heading": "Обо мне",
-      "general": "Меня зовут Никита Николин, я начинающий разработчик.\nДва года назад я начал самостоятельно изучать Python по самоучителю (book_name). Со временем мой интерес только усиливался, и я решил, что хочу работать в ит.\nИзучив основы python, я перешел к изучению веб-фреймворков, sql, фронтенд-технологий, основ linux и технологий по контролю версий.\nЯ могу написать REST API, делать запросы в SQL и NoSQL, писать парсеры для документов и сайтов, написать интерфейс в React, связать фронт и бек при помощи fetch или axios."
+      "general": "Меня зовут Никита Николин, я начинающий разработчик.\nДва года назад я начал самостоятельно изучать Python по самоучителям Python Crash Course (E.Mathes) и Automate the Boring Stuff with Python(A.Sweigart). Со временем мой интерес только усиливался, и я решил, что хочу работать в IT.\nИзучив основы python, я перешел к изучению веб-фреймворков, sql, фронтенд-технологий, основ linux и технологий по контролю версий.\nЯ могу написать REST API, делать запросы в SQL и NoSQL, писать парсеры для документов и сайтов, интерфейс в React, связать фронт и бек при помощи fetch или axios. А также я знаю основы пользования командной строки Linux (Ubuntu) и могу писать Bash-скрипты.",
+      "github_url": "https://github.com/n-nikolin"
     },
     "tools_and_skills": {
       "tools": { "heading": "Инструменты и навыки" },
@@ -41,18 +42,24 @@
       "projects": [
         {
           "id": 0,
-          "title": "проектнейм_0",
-          "description": "это какой_то проект. в общем, это все гавно должно фечится с гитхаба, но пока там у меня одна зашкварная параша, так что нет и вообще, это все пока что прототип и просто заполнение места текстом, чтобы посмотреть как оно выглядеть будет, но потом тоже ради прикола дабавлю хуйню, которая будет названия и описания с гитхаба фетчить"
+          "title": "Этот сайт",
+          "description": "Написан на React и SCSS, запросами через axios и отправкой сообщений через EmailJS. Все готово, но далеко от идеала. Как и другие проекты из этого списка, представляет скорее учебный интерес. Местами требуется рефакторинг. В будущем здесь будет бэкенд.",
+          "languages_url": "https://api.github.com/repos/n-nikolin/resume-spa/languages",
+          "repo_url": "https://github.com/n-nikolin/resume-spa"
         },
         {
           "id": 1,
-          "title": "проектнейм_1",
-          "description": "это какой_то проект. в общем, это все гавно должно фечится с гитхаба, но пока там у меня одна зашкварная параша, так что нет и вообще, это все пока что прототип и просто заполнение места текстом, чтобы посмотреть как оно выглядеть будет, но потом тоже ради прикола дабавлю хуйню, которая будет названия и описания с гитхаба фетчить"
+          "title": "Фетч репозиториев",
+          "description": "Компонент интерфейса, написанный на React и CSS. Выдает список репозиториев с описанием полоской использованных языков и тэгами (топиками) пользователя с GitHub. Прототип/видоизмененная версия полоски в модальных окнах на данном сайте.",
+          "languages_url": "https://api.github.com/repos/n-nikolin/github-fetcher/languages",
+          "repo_url": "https://github.com/n-nikolin/github-fetcher"
         },
         {
           "id": 2,
-          "title": "проектнейм_2",
-          "description": "это какой_то проект. в общем, это все гавно должно фечится с гитхаба, но пока там у меня одна зашкварная параша, так что нет и вообще, это все пока что прототип и просто заполнение места текстом, чтобы посмотреть как оно выглядеть будет, но потом тоже ради прикола дабавлю хуйню, которая будет названия и описания с гитхаба фетчить"
+          "title": "API с JWT на Flask",
+          "description": "Система авторизации на Flask с JWT токенами. Проверял на Postman. Было интересно что такое JWT токены и как с ними работать.",
+          "languages_url": "https://api.github.com/repos/n-nikolin/flask_auth_api/languages",
+          "repo_url": "https://github.com/n-nikolin/flask_auth_api"
         }
       ]
     },
@@ -65,10 +72,6 @@
       "label": { "name": "Имя", "email": "Email", "message": "Сообщение" },
       "submit_btn": "Отправить",
       "success_popup": "Сообщение отправлено!"
-    },
-    "footer": {
-      "par_1": "тут футер какой_то я  пока не придумал, что тут писать. очень не хочется придумывать",
-      "par_2": " хочу просто кодить, а не заниматься этим текстовым заполнением. ну, внатуре, тут чисто каку с тренироовкамиЖ самое простое и понятное - потренироваться, а остальное пиздец трудно. спать вовремя, есть достаточно и тоже вовремя. пиздец. "
     }
   },
   "en": {
@@ -80,11 +83,12 @@
     },
     "header": {
       "heading": "Hi, my name is Nikita",
-      "subheading": "This is my site/portfolio/resume"
+      "subheading": "This is my site/portfolio/resume\nStill under construction\nNext iteration will have a backend"
     },
     "about_me": {
       "heading": "About Me",
-      "general": "Once again, hi, my name is Nikita Nikolin and I'm an aspiring software developer.\nTwo years ago I began my programming journey by learning Python through books (\"Python Crash Course\" by E. Matthes and \"Automate the Boring stuff with Python\" by Al Sweigart) and online tutorials.\n Although there's infinite things one can accomplish with Python I've decided to narrow things down to all things web. That's why I began expanding my knowledge beyond Python and its web-frameworks (Flask, Django) to other technologies (JS, HTML, CSS, SQL, Linux) in order to get a better understanding of how things are built and to make my own projects."
+      "general": "Once again, hi, my name is Nikita Nikolin and I'm an aspiring software developer.\nTwo years ago I began my programming journey by learning Python through books (\"Python Crash Course\" by E. Matthes and \"Automate the Boring stuff with Python\" by Al Sweigart) and online tutorials.\n Although there's infinite things one can accomplish with Python I've decided to narrow things down to all things web. That's why I began expanding my knowledge beyond Python and its web-frameworks (Flask, Django) to other technologies (JS, HTML, CSS, SQL, Linux) in order to get a better understanding of how things are built and to make my own projects.",
+      "github_url": "https://github.com/n-nikolin"
     },
 
     "tools_and_skills": {
@@ -114,20 +118,24 @@
       "projects": [
         {
           "id": 0,
-          "title": "ProjectName_0",
-          "description": "1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, provident!"
+          "title": "This Website",
+          "description": "Written in React and SCSS with Axios for sending api requests and EmailJS for sending Emails. It's till under construction and the code needs some refactoring. I have plans to add a backend.",
+          "languages_url": "https://api.github.com/repos/n-nikolin/resume-spa/languages",
+          "repo_url": "https://github.com/n-nikolin/resume-spa"
         },
-
         {
           "id": 1,
-
-          "title": "ProjectName_1",
-          "description": "2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, provident!"
+          "title": "Repo Fetcher",
+          "description": "A UI component, that returns the About, Topics and languages with a progressbar. Very similar to the progressbar in this modal window.",
+          "languages_url": "https://api.github.com/repos/n-nikolin/github-fetcher/languages",
+          "repo_url": "https://github.com/n-nikolin/github-fetcher"
         },
         {
           "id": 2,
-          "title": "ProjectName_2",
-          "description": "3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, provident!"
+          "title": "JWT API",
+          "description": "An authentiacation API with JWT tokens written in Flask.",
+          "languages_url": "https://api.github.com/repos/n-nikolin/flask_auth_api/languages",
+          "repo_url": "https://github.com/n-nikolin/flask_auth_api"
         }
       ]
     },
@@ -135,15 +143,11 @@
       "heading": "Contact Me",
       "legend": {
         "heading": "Leave me a message",
-        "legend": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sit sunt maxime ex harum quam!"
+        "legend": "If I interest you as a potential employee, you found a bug, want to see me add a feature or have anything else to say, feel free to leave me a message. I promise to reply as soon as possible."
       },
       "label": { "email": "Email", "message": "Message", "name": "Name" },
       "submit_btn": "Submit",
       "success_popup": "Your message has been sent!"
-    },
-    "footer": {
-      "par_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas similique, dolorum praesentium modi nulla distinctio.",
-      "par_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas similique, dolorum praesentium modi nulla distinctio."
     }
   }
 }
