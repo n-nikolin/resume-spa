@@ -35,7 +35,7 @@ export default function ProjectCardModal({
         setTotal(getTotal(res.data));
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [langUrl]);
 
   return (
     <div
