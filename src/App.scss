@@ -184,6 +184,7 @@ form,
     background-color: $content-background;
     border-radius: 2rem;
     padding: 0.5em;
+    overflow: auto;
     img {
       float: right;
       max-width: 25ch;
