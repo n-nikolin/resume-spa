@@ -36,6 +36,11 @@ export default function ContactMe({ contactMe }) {
           console.log(result.text);
           setIsMessageSent(true);
           setIsSending(false);
+          setMessageForm({
+            user_name: "",
+            email: "",
+            message: "",
+          });
         },
         (error) => {
           console.log(error.text);

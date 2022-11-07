@@ -6,13 +6,15 @@ export default function ProjectCard(props) {
 
   // disable scroll on open modal
   useEffect(() => {
+    const scrollWidth = window.innerWidth - document.getElementById('root').offsetWidth
+    console.log(scrollWidth)
     document.body.style.overflow = isOpen ? "hidden" : "auto";
-    document.body.style.paddingRight = isOpen ? "20px" : "0";
+    document.body.style.paddingRight = isOpen ? `${scrollWidth}px` : "0";
     document.getElementsByClassName("navbar")[0].style.marginRight = isOpen
-      ? "18px"
+      ? `${scrollWidth}px`
       : "0";
     document.getElementsByClassName("scroll-to-top")[0].style.marginRight =
-      isOpen ? "18px" : "0";
+      isOpen ? `${scrollWidth}px` : "0";
   }, [isOpen]);
 
   return (

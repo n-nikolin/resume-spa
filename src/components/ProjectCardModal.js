@@ -66,12 +66,8 @@ export default function ProjectCardModal({
           <ul>
             {Object.entries(languages).map(([key, value], i) => {
               return (
-                <li>
-                  <span
-                    key={i}
-                    className="circle"
-                    id={key.toLowerCase()}
-                  ></span>
+                <li key={i}>
+                  <span className="circle" id={key.toLowerCase()}></span>
                   {key}: {((value / total) * 100).toFixed(1)}%
                 </li>
               );
