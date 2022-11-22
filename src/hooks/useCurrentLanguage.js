@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import textContent from "../assets/textContent.json";
 
-export function useCurrentLanguage(isChecked, defaultValue) {
-    const [currentValue, setCurrentValue] = useState(defaultValue);
+export function useCurrentLanguage(checked) {
+    const [currentValue, setCurrentValue] = useState(textContent.ru);
 
     useEffect(() => {
-        switch (isChecked) {
+        switch (checked) {
             case "ru":
                 setCurrentValue(textContent.ru);
                 break;
@@ -15,7 +15,7 @@ export function useCurrentLanguage(isChecked, defaultValue) {
             default:
                 setCurrentValue(currentValue);
         }
-    }, [currentValue, isChecked]);
+    }, [currentValue, checked]);
 
     return currentValue
 }

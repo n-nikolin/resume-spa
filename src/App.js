@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./App.scss";
 
 import { useLocalStorage } from "./hooks/useLocalStorage";
-import {useCurrentLanguage} from './hooks/useCurrentLanguage'
+import { useCurrentLanguage } from "./hooks/useCurrentLanguage";
 
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -11,12 +11,11 @@ import MyProjects from "./components/MyProjects";
 import ToolsAndSkills from "./components/ToolsAndSkills";
 import ContactMe from "./components/ContactMe";
 
-import textContent from "./assets/textContent.json";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [isChecked, setIsChecked] = useLocalStorage("currentLanguage", "ru");
-  const currentLanguage = useCurrentLanguage(isChecked, textContent.ru);
+  const currentLanguage = useCurrentLanguage(isChecked);
 
   useEffect(() => {
     document.title = currentLanguage.header.heading;
