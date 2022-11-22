@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./App.scss";
 
 import { useLocalStorage } from "./hooks/useLocalStorage";
+import {useCurrentLanguage} from './hooks/useCurrentLanguage'
 
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -15,25 +16,11 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [isChecked, setIsChecked] = useLocalStorage("currentLanguage", "ru");
-  const [currentLanguage, setCurrentLanguage] = useState(textContent.ru);
+  const currentLanguage = useCurrentLanguage(isChecked, textContent.ru);
 
   useEffect(() => {
     document.title = currentLanguage.header.heading;
   });
-  // would probably be a good idea to try and rewrite this as context
-  // and put into separate hook or something like that
-  useEffect(() => {
-    switch (isChecked) {
-      case "ru":
-        setCurrentLanguage(textContent.ru);
-        break;
-      case "en":
-        setCurrentLanguage(textContent.en);
-        break;
-      default:
-        setCurrentLanguage(currentLanguage);
-    }
-  }, [currentLanguage, isChecked]);
 
   return (
     <div>
