@@ -27,7 +27,7 @@ export default function ProjectCardModal({
     axios
       .get(langUrl, {
         headers: {
-          Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
+          Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
         },
       })
       .then((res) => {

@@ -20,11 +20,11 @@ export default function ProjectCard(props) {
   return (
     <div className="project-card" onClick={() => setIsOpen(true)}>
       <h3>{props.title}</h3>
-      <p>{props.shortDescription}</p>
+      <p className="clamped">{props.description}</p>
       <ProjectCardModal
         id={props.id}
         title={props.title}
-        description={props.longDescription}
+        description={props.description}
         modalOpen={isOpen}
         langUrl={props.langUrl}
         repoUrl={props.repoUrl}

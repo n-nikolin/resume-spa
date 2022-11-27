@@ -1,5 +1,4 @@
-// TODO: try to clear form when message has been sent
-// TODO: add animetion while waiting for response
+// add error popup
 
 import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
@@ -23,31 +22,33 @@ export default function ContactMe({ contactMe }) {
   // TODO: separate function concerns
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_PUBLIC_ID
-      )
-      .then(setIsSending(true))
-      .then(
-        (result) => {
+    setIsSending(true);
+    try {
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_SERVICE_ID,
+          // import.meta.env.VITE_TEMPLATE_ID,
+          form.current,
+          import.meta.env.VITE_PUBLIC_ID
+        )
+        .then((result) => {
           console.log(result.text);
           setIsMessageSent(true);
-          setIsSending(false);
           setMessageForm({
             user_name: "",
             email: "",
             message: "",
           });
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+          setIsSending(false);
+        });
+    } catch (error) {
+      console.log(error.text);
+      alert("message not sent");
+      setIsSending(false);
+    }
   };
 
+  // shows message popup
   useEffect(() => {
     const timeId = setTimeout(() => {
       setIsMessageSent(false);

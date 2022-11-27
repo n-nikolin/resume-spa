@@ -60,7 +60,7 @@ body {
 
 section {
   width: 90%;
-  max-width: 80ch;
+  max-width: 90ch;
   margin: 2rem auto;
   text-align: center;
   background-color: $section-background;
@@ -193,7 +193,7 @@ form,
       border: solid 2px $primary-light;
     }
     p {
-      margin: 0 auto;
+      margin: 0 1rem;
       text-align: justify;
       max-width: 72ch;
       padding-right: 1ch;
@@ -215,11 +215,24 @@ form,
   flex-wrap: wrap;
   justify-content: space-around;
   .project-card {
-    margin: 0.3rem;
+    margin: 0.2rem;
     border-radius: 2rem;
     padding: 1rem;
     width: 25%;
     cursor: pointer;
+    h3{
+      line-height: 1
+    }
+    .clamped {
+      // show only first three lines
+      margin: 0 auto;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-align: justify;
+      text-justify: auto;
+    }
   }
   .project-card-modal {
     position: fixed;
