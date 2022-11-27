@@ -27,7 +27,7 @@ export default function ContactMe({ contactMe }) {
       emailjs
         .sendForm(
           import.meta.env.VITE_SERVICE_ID,
-          // import.meta.env.VITE_TEMPLATE_ID,
+          import.meta.env.VITE_TEMPLATE_ID,
           form.current,
           import.meta.env.VITE_PUBLIC_ID
         )
