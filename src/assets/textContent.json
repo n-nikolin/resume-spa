@@ -77,8 +77,8 @@
   "en": {
     "navbar": {
       "about_me": "About Me",
-      "my_projects": "My Projects",
       "tools_and_skills": "Tools and Skills",
+      "my_projects": "My Projects",
       "contact_me": "Contact Me"
     },
     "header": {
