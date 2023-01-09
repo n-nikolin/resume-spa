@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import textContent from "../assets/textContent.json";
 
-export function useCurrentLanguage(checked) {
+const useCurrentLanguage = (checked) => {
   const [currentValue, setCurrentValue] = useState(textContent.ru);
 
   useEffect(() => {
@@ -18,4 +18,6 @@ export function useCurrentLanguage(checked) {
   }, [currentValue, checked]);
 
   return currentValue;
-}
+};
+
+export default useCurrentLanguage;
