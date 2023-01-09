@@ -51,6 +51,7 @@ export default function ContactMe({ contactMe }) {
 
   // shows message popup
   useEffect(() => {
+    console.log('Called by changes in form')
     const timeId = setTimeout(() => {
       setIsMessageSent(false);
     }, 2500);

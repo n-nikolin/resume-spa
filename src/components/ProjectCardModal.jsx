@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import logo from "../assets/logo";
 import ui from "../assets/ui";
+import ProgressBar from "./ProgressBar";
+import LanguageList from "./LanguageList";
 
 const ProjectCardModal = ({
   id,
@@ -24,6 +26,7 @@ const ProjectCardModal = ({
   };
 
   useEffect(() => {
+    console.log("sent a get request to github");
     axios
       .get(langUrl, {
         headers: {
@@ -49,30 +52,8 @@ const ProjectCardModal = ({
           </button>
           <h3>{title}</h3>
           <p>{description}</p>
-          <div className="progress-bar">
-            {Object.entries(languages).map(([key, value], i) => {
-              return (
-                <span
-                  className="progress-bar-section"
-                  key={i}
-                  id={key.toLowerCase()}
-                  style={{
-                    width: `${(value / total) * 100}%`,
-                  }}
-                ></span>
-              );
-            })}
-          </div>
-          <ul>
-            {Object.entries(languages).map(([key, value], i) => {
-              return (
-                <li key={i}>
-                  <span className="circle" id={key.toLowerCase()}></span>
-                  {key}: {((value / total) * 100).toFixed(1)}%
-                </li>
-              );
-            })}
-          </ul>
+          <ProgressBar languages={languages} total={total} />
+          <LanguageList languages={languages} total={total} />
           <a
             href={repoUrl}
             //to open in new tab

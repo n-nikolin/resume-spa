@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../assets/logo";
 
+// TODO: think of a less repetitive way of doing this
+
 const ToolsAndSkills = ({
   toolsHeading,
   skillsHeading,
