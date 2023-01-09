@@ -1,12 +1,12 @@
 import React from "react";
 import logo from "../assets/logo";
 
-export default function ToolsAndSkills({
+const ToolsAndSkills = ({
   toolsHeading,
   skillsHeading,
   education,
   foreignLanguages,
-}) {
+}) => {
   const languagesList = foreignLanguages.languages;
 
   return (
@@ -64,4 +64,6 @@ export default function ToolsAndSkills({
       </div>
     </section>
   );
-}
+};
+
+export default ToolsAndSkills;

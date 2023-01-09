@@ -1,7 +1,6 @@
 import ProjectCard from "./ProjectCard";
 
-export default function MyProjects({ myProjects }) {
-
+const MyProjects = ({ myProjects }) => {
   return (
     <section className="my-projects" id="my_projects">
       <h2>{myProjects.heading}</h2>
@@ -21,4 +20,6 @@ export default function MyProjects({ myProjects }) {
       </div>
     </section>
   );
-}
+};
+
+export default MyProjects;

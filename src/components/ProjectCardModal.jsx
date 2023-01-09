@@ -3,7 +3,7 @@ import axios from "axios";
 import logo from "../assets/logo";
 import ui from "../assets/ui";
 
-export default function ProjectCardModal({
+const ProjectCardModal = ({
   id,
   title,
   description,
@@ -11,7 +11,7 @@ export default function ProjectCardModal({
   setModalOpen,
   langUrl,
   repoUrl,
-}) {
+}) => {
   const [languages, setLanguages] = useState([]);
   const [total, setTotal] = useState();
 
@@ -85,4 +85,6 @@ export default function ProjectCardModal({
       </div>
     </div>
   );
-}
+};
+
+export default ProjectCardModal;

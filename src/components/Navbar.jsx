@@ -3,22 +3,14 @@ import { useRef } from "react";
 import { useState } from "react";
 import ui from "../assets/ui";
 import LanguageSwitch from "./LanguageSwitch";
+import NavItems from "./NavItems";
 
-export default function Navbar({ navbar, isChecked, setIsChecked }) {
+const Navbar = ({ navbar, isChecked, setIsChecked }) => {
   const [isOpen, setIsOpen] = useState(false);
   const btnRef = useRef();
 
   const toggleVisible = () => {
     setIsOpen(!isOpen);
-  };
-
-  const handleScroll = (key) => {
-    // TODO: try adding animations and making it smooth
-    document.getElementById(key).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
   };
 
   useEffect(() => {
@@ -36,19 +28,15 @@ export default function Navbar({ navbar, isChecked, setIsChecked }) {
     };
   }, []);
 
-  const menuItems = Object.entries(navbar).map(([key, value]) => (
-    <li key={key}>
-      <p onClick={() => handleScroll(key)}>{value}</p>
-    </li>
-  ));
-
   return (
     <div className="navbar">
       <LanguageSwitch isChecked={isChecked} setIsChecked={setIsChecked} />
       <button onClick={toggleVisible} ref={btnRef}>
         <img src={ui.hamburgerMenu} alt="hamburger menu icon" />
       </button>
-      <ul id={isOpen ? "open" : "closed"}>{menuItems}</ul>
+      <NavItems navbar={navbar} isOpen={isOpen} />
     </div>
   );
-}
+};
+
+export default Navbar;

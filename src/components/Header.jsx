@@ -1,14 +1,16 @@
-import React from 'react'
+import React from "react";
 
-export default function Header({ header }) {
+const Header = ({ header }) => {
   return (
-    <section className='landing-header'>
-        <header>
-            <h1>{header.heading}</h1>
-            <div className="content">
-            <h3>{header.subheading}</h3>
-            </div>
-        </header>
+    <section className="landing-header">
+      <header>
+        <h1>{header.heading}</h1>
+        <div className="content">
+          <h3>{header.subheading}</h3>
+        </div>
+      </header>
     </section>
-  )
-}
+  );
+};
+
+export default Header;

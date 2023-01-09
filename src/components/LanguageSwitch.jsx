@@ -1,4 +1,4 @@
-function LanguageSwitch({ isChecked, setIsChecked }) {
+const LanguageSwitch = ({ isChecked, setIsChecked }) => {
   const handleChange = (e) => {
     setIsChecked(e.target.value);
   };

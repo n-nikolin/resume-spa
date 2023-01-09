@@ -1,6 +1,6 @@
 import profilePic from "../assets/my_photo.jpg";
 
-export default function AboutMe({ aboutMe }) {
+const AboutMe = ({ aboutMe }) => {
   return (
     <section className="about-me" id="about_me">
       <div className="about-me heading">
@@ -12,4 +12,6 @@ export default function AboutMe({ aboutMe }) {
       </div>
     </section>
   );
-}
+};
+
+export default AboutMe;

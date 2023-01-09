@@ -19,6 +19,7 @@ export default function ContactMe({ contactMe }) {
       [e.target.name]: e.target.value,
     });
   };
+
   // TODO: separate function concerns
   const sendEmail = (e) => {
     e.preventDefault();

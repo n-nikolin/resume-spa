@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import ProjectCardModal from "./ProjectCardModal";
 
-export default function ProjectCard(props) {
+const ProjectCard = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // disable scroll on open modal
   useEffect(() => {
-    const scrollWidth = window.innerWidth - document.getElementById('root').offsetWidth
-    console.log(scrollWidth)
+    const scrollWidth =
+      window.innerWidth - document.getElementById("root").offsetWidth;
+    console.log(scrollWidth);
     document.body.style.overflow = isOpen ? "hidden" : "auto";
     document.body.style.paddingRight = isOpen ? `${scrollWidth}px` : "0";
     document.getElementsByClassName("navbar")[0].style.marginRight = isOpen
@@ -32,4 +33,6 @@ export default function ProjectCard(props) {
       />
     </div>
   );
-}
+};
+
+export default ProjectCard;

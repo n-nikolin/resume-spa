@@ -2,7 +2,7 @@ import ui from "../assets/ui";
 import { useState } from "react";
 import { useEffect } from "react";
 
-export default function ScrollToTop() {
+const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -31,3 +31,5 @@ export default function ScrollToTop() {
     </div>
   );
 }
+
+export default ScrollToTop
