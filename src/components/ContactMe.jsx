@@ -51,13 +51,14 @@ export default function ContactMe({ contactMe }) {
 
   // shows message popup
   useEffect(() => {
-    console.log('Called by changes in form')
-    const timeId = setTimeout(() => {
-      setIsMessageSent(false);
-    }, 2500);
-    return () => {
-      clearTimeout(timeId);
-    };
+    if (isMessageSent) {
+      const timeId = setTimeout(() => {
+        setIsMessageSent(false);
+      }, 2500);
+      return () => {
+        clearTimeout(timeId);
+      };
+    }
   });
 
   return (
@@ -67,7 +68,7 @@ export default function ContactMe({ contactMe }) {
         ref={form}
         onSubmit={sendEmail}
         sending={isSending.toString()}
-        className={isSending === true ? "disabled" : null}
+        className={isSending ? "disabled" : null}
       >
         <legend>
           <h3>{contactMe.legend.heading}</h3>
