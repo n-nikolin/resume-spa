@@ -1,6 +1,5 @@
-import { useEffect } from "react";
-import { useRef } from "react";
-import { useState } from "react";
+import React from "react";
+import { useEffect, useRef, useState } from "react";
 import ui from "../assets/ui";
 import LanguageSwitch from "./LanguageSwitch";
 import NavItems from "./NavItems";

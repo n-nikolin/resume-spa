@@ -1,3 +1,4 @@
+import React from "react";
 import profilePic from "../assets/my_photo.jpg";
 
 const AboutMe = ({ aboutMe }) => {

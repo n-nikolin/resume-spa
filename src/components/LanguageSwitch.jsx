@@ -1,3 +1,5 @@
+import React from "react";
+
 const LanguageSwitch = ({ isChecked, setIsChecked }) => {
   const handleChange = (e) => {
     setIsChecked(e.target.value);

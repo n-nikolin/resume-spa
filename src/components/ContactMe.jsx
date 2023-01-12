@@ -1,6 +1,6 @@
 // add error popup
 
-import { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import usePopup from "../hooks/usePopup";
 import emailjs from "@emailjs/browser";
 
