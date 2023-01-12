@@ -26,9 +26,15 @@ const ProjectCardModal = ({
           </button>
           <h3>{title}</h3>
           <p>{description}</p>
-          {fetching && <h1 style={{ textAlign: "center" }}>fetching data...</h1>}
-          <ProgressBar languages={languages} total={total} />
-          <LanguageList languages={languages} total={total} />
+          {fetching && (
+            <h1 style={{ textAlign: "center" }}>fetching data...</h1>
+          )}
+          {!fetching && (
+            <div>
+              <ProgressBar languages={languages} total={total} />
+              <LanguageList languages={languages} total={total} />
+            </div>
+          )}
           <a
             href={repoUrl}
             //to open in new tab

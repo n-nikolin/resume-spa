@@ -1,11 +1,12 @@
 // add error popup
 
 import { useRef, useState, useEffect } from "react";
+import usePopup from "../hooks/usePopup";
 import emailjs from "@emailjs/browser";
 
 export default function ContactMe({ contactMe }) {
   const form = useRef();
-  const [isMessageSent, setIsMessageSent] = useState(false);
+  const [isMessageSent, setIsMessageSent] = usePopup(false);
   const [isSending, setIsSending] = useState(false);
   const [messageForm, setMessageForm] = useState({
     user_name: "",
@@ -48,18 +49,6 @@ export default function ContactMe({ contactMe }) {
       setIsSending(false);
     }
   };
-
-  // shows message popup
-  useEffect(() => {
-    if (isMessageSent) {
-      const timeId = setTimeout(() => {
-        setIsMessageSent(false);
-      }, 2500);
-      return () => {
-        clearTimeout(timeId);
-      };
-    }
-  });
 
   return (
     <section className="contact-me" id="contact_me">
