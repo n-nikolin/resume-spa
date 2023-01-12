@@ -12,8 +12,8 @@ const ProjectCardModal = ({
   total,
   repoUrl,
   languages,
+  fetching,
 }) => {
-
   return (
     <div
       className={`project-card-modal ${modalOpen ? "open" : "closed"}`}
@@ -26,6 +26,7 @@ const ProjectCardModal = ({
           </button>
           <h3>{title}</h3>
           <p>{description}</p>
+          {fetching && <h1 style={{ textAlign: "center" }}>fetching data...</h1>}
           <ProgressBar languages={languages} total={total} />
           <LanguageList languages={languages} total={total} />
           <a

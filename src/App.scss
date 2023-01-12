@@ -122,6 +122,15 @@ form,
     top: 0;
     padding-top: 4.5rem;
     position: fixed;
+    animation: slide-in 0.5s;
+  }
+  @keyframes slide-in {
+    0%{
+      right:-20%
+    }    
+    100%{
+      right:0
+    }    
   }
   li {
     max-width: 15ch;
@@ -220,8 +229,8 @@ form,
     padding: 1rem;
     width: 25%;
     cursor: pointer;
-    h3{
-      line-height: 1
+    h3 {
+      line-height: 1;
     }
     .clamped {
       // show only first three lines
@@ -260,6 +269,15 @@ form,
         scrollbar-width: none;
         overflow-y: auto;
         overflow-x: hidden;
+        animation: fade-in 0.5s;
+        @keyframes fade-in {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
         &::-webkit-scrollbar {
           display: none;
         }

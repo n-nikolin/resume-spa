@@ -27,11 +27,13 @@ const offsetScrollWidth = (arg) => {
 const ProjectCard = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [languages, setLanguages] = useState([]);
+  const [fetching, setFetching] = useState(false);
   const [total, setTotal] = useState();
 
   useEffect(() => {
     offsetScrollWidth(isOpen);
     if (isOpen) {
+      setFetching(true);
       axios
         .get(props.langUrl, {
           headers: {
@@ -42,8 +44,10 @@ const ProjectCard = (props) => {
           console.log(res.data);
           setLanguages(res.data);
           setTotal(getTotal(res.data));
+          setFetching(false);
         })
         .catch((err) => console.log(err));
+        setFetching(false);
     }
   }, [isOpen]);
 
@@ -59,6 +63,7 @@ const ProjectCard = (props) => {
         total={total}
         modalOpen={isOpen}
         setModalOpen={setIsOpen}
+        fetching={fetching}
       />
     </div>
   );
