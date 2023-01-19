@@ -1,4 +1,5 @@
 import React from "react";
+import './LanguageSwitch.scss'
 
 const LanguageSwitch = ({ isChecked, setIsChecked }) => {
   const handleChange = (e) => {

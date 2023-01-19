@@ -1,0 +1,43 @@
+@use '../../App.scss' as a;
+
+.project-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .project-card {
+    margin: 0.2rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 25%;
+    cursor: pointer;
+    h3 {
+      line-height: 1;
+    }
+    .clamped {
+      // show only first three lines
+      margin: 0 auto;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-align: justify;
+      text-justify: auto;
+    }
+  }
+  @media screen and (max-width: a.$mobile) {
+    display: block;
+    .project-card {
+      margin: 0 auto;
+      width: 80%;
+      margin-bottom: 1.1rem;
+    }
+    .container {
+      width: 70%;
+      padding: 1rem;
+      .content {
+        max-width: 100%;
+      }
+    }
+  }
+}

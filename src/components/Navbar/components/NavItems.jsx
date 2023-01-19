@@ -1,6 +1,8 @@
 import React from "react";
+import { useRef } from "react";
 
 const NavItems = ({ navbar, isOpen }) => {
+  const itemRef = useRef(null)
   const handleScroll = (key) => {
     document.getElementById(key).scrollIntoView({
       behavior: "smooth",

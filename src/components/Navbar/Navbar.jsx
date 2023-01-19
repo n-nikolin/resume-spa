@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
-import ui from "../assets/ui";
-import LanguageSwitch from "./LanguageSwitch";
-import NavItems from "./NavItems";
+import './Navbar.scss'
+import ui from "../../assets/ui";
+import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
+import NavItems from "./components/NavItems";
 
 const Navbar = ({ navbar, isChecked, setIsChecked }) => {
   const [isOpen, setIsOpen] = useState(false);

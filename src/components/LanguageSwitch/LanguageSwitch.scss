@@ -1,0 +1,22 @@
+.language-switch {
+    z-index: 99;
+    label {
+      padding: 0.7rem;
+      border-radius: 0.5rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    input[type="radio"] {
+      width: 0px;
+      opacity: 0;
+      & + label {
+        background-color: red;
+      }
+      &:checked + label {
+        background-color: green;
+        cursor: default;
+      }
+    }
+  }
+  

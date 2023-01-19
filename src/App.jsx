@@ -4,13 +4,13 @@ import "./App.scss";
 import useLocalStorage from "./hooks/useLocalStorage";
 import useCurrentLanguage from "./hooks/useCurrentLanguage";
 
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import AboutMe from "./components/AboutMe";
-import MyProjects from "./components/MyProjects";
-import ToolsAndSkills from "./components/ToolsAndSkills";
-import ContactMe from "./components/ContactMe";
-import ScrollToTop from "./components/ScrollToTop";
+import Navbar from "./components/Navbar/Navbar";
+import Header from "./components/Header/Header";
+import AboutMe from "./components/AboutMe/AboutMe";
+import MyProjects from "./components/MyProjects/MyProjects";
+import ToolsAndSkills from "./components/ToolsAndSkills/ToolsAndSkills";
+import ContactMe from "./components/ContactMe/ContactMe";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   const [isChecked, setIsChecked] = useLocalStorage("currentLanguage", "ru");

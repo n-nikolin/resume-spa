@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import ProjectCardModal from "./ProjectCardModal";
+import './ProjectCard.scss'
+import ProjectCardModal from "../ProjectCardModal/ProjectCardModal";
 import axios from "axios";
 // TODO: think of a way to separate useEffect from component
 

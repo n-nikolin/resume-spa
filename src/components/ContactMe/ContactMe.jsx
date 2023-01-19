@@ -1,7 +1,8 @@
 // add error popup
 
 import React, { useRef, useState } from "react";
-import usePopup from "../hooks/usePopup";
+import './ContactMe.scss'
+import usePopup from "../../hooks/usePopup";
 import emailjs from "@emailjs/browser";
 
 export default function ContactMe({ contactMe }) {

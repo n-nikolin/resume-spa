@@ -1,0 +1,59 @@
+@use '../../App.scss' as a;
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    button {
+      z-index: 2;
+      // background-color: inherit;
+      padding: 0;
+      // outline: none;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      margin-left: 1rem;
+      img {
+        width: 2.2rem;
+      }
+    }
+    ul {
+      z-index: 1;
+      position: fixed;
+      list-style: none;
+      background-color: rgba(0, 0, 0, 0.614);
+      height: 100vh;
+      width: 30vh;
+      right: 0;
+      top: 0;
+      padding-top: 4.5rem;
+      position: fixed;
+      animation: slide-in 0.5s;
+    }
+    @keyframes slide-in {
+      0%{
+        right:-20%
+      }    
+      100%{
+        right:0
+      }    
+    }
+    li {
+      max-width: 15ch;
+      margin-left: 0.5rem;
+    }
+    p {
+      display: block;
+      text-decoration: none;
+      color: a.$primary-light;
+      width: 100%;
+      cursor: pointer;
+      &:hover {
+        color: a.$content-color;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  

@@ -1,0 +1,96 @@
+@use '../../App.scss' as a;
+
+.contact-me {
+  max-width: 70ch;
+  display: grid;
+  form {
+    padding: 0.5em;
+    div {
+      width: 100%;
+      text-align: left;
+      margin: 0.3rem 0rem;
+    }
+    textarea,
+    input {
+      width: 80%;
+      border: none;
+      box-sizing: border-box;
+      border-radius: 0.3rem;
+      float: right;
+      padding: 0.1em 0.4em;
+      font-size: inherit;
+      font-weight: inherit;
+      text-decoration: none;
+      font-family: inherit;
+      @media screen and (max-width: a.$mobile) {
+        width: 100%;
+      }
+    }
+    textarea {
+      color: a.$primary-color;
+      resize: none;
+      height: 10rem;
+      margin-bottom: 0.5rem;
+    }
+    legend {
+      text-align: justify;
+      h3 {
+        text-align: center;
+      }
+    }
+    button {
+      display: block;
+      background-color: a.$submit-button;
+      color: a.$content-color;
+      padding: 1rem;
+      border: none;
+      width: 100%;
+      margin: 0 auto;
+      width: 80%;
+      margin-right: 0;
+      &:hover {
+        cursor: pointer;
+      }
+      @media screen and (max-width: a.$mobile) {
+        width: 100%;
+      }
+    }
+  }
+
+  .disabled {
+    pointer-events: none;
+    textarea,
+    input {
+      background-color: a.$content-background;
+      border: a.$primary-light solid 2px;
+    }
+    button {
+      background-color: rgb(221, 206, 151);
+    }
+  }
+
+  .success-popup {
+    position: fixed;
+    top: 40%;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
+  .loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    animation: spin 0.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

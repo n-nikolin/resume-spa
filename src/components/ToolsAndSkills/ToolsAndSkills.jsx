@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../assets/logo";
+import logo from "../../assets/logo";
+import './ToolsAndSkills.scss'
 
 // TODO: think of a less repetitive way of doing this
 

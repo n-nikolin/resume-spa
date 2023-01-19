@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import ui from "../assets/ui";
+import './ScrollToTop.scss'
+import ui from "../../assets/ui";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);

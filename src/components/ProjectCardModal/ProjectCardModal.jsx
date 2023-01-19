@@ -1,8 +1,9 @@
 import React from "react";
-import logo from "../assets/logo";
-import ui from "../assets/ui";
-import ProgressBar from "./ProgressBar";
-import LanguageList from "./LanguageList";
+import logo from "../../assets/logo";
+import ui from "../../assets/ui";
+import './ProjectCardModal.scss'
+import ProgressBar from "./components/ProgressBar";
+import LanguageList from "./components/LanguageList";
 
 const ProjectCardModal = ({
   id,

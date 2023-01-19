@@ -1,0 +1,33 @@
+@use '../../App.scss' as a;
+
+.about-me {
+  .content {
+    // display: flex;
+    // flex-direction: row-reverse;
+    background-color: a.$content-background;
+    border-radius: 2rem;
+    padding: 0.5em;
+    overflow: auto;
+    img {
+      float: right;
+      max-width: 25ch;
+      height: 100%;
+      border-radius: 50%;
+      border: solid 2px a.$primary-light;
+    }
+    p {
+      margin: 0 1rem;
+      text-align: justify;
+      max-width: 72ch;
+      padding-right: 1ch;
+    }
+    @media screen and (max-width: a.$mobile) {
+      display: block;
+      justify-content: space-around;
+      img {
+        width: 15ch;
+        margin-left: 1ch;
+      }
+    }
+  }
+}

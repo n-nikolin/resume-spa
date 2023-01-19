@@ -1,0 +1,14 @@
+.scroll-to-top {
+  bottom: 1rem;
+  right: 1rem;
+  position: fixed;
+  z-index: 2;
+  button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    img {
+      scale: 1.5;
+    }
+  }
+}
