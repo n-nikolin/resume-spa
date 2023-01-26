@@ -1,19 +1,19 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import logo from "../../assets/logo";
 import './ToolsAndSkills.scss'
 
 // TODO: think of a less repetitive way of doing this
 
-const ToolsAndSkills = ({
+const ToolsAndSkills = forwardRef(({
   toolsHeading,
   skillsHeading,
   education,
   foreignLanguages,
-}) => {
+}, ref) => {
   const languagesList = foreignLanguages.languages;
 
   return (
-    <section className="tools-and-skills" id="tools_and_skills">
+    <section className="tools-and-skills" id="tools_and_skills" ref={ref}>
       <h2 className="tools-and-skills heading">{toolsHeading}</h2>
       <div className="tools-and-skills wrapper">
         <div className="tools-and-skills gallery">
@@ -67,6 +67,6 @@ const ToolsAndSkills = ({
       </div>
     </section>
   );
-};
+});
 
 export default ToolsAndSkills;

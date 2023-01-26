@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import React from "react";
 import "./App.scss";
+import { useRef } from "react";
 
 import useLocalStorage from "./hooks/useLocalStorage";
 import useCurrentLanguage from "./hooks/useCurrentLanguage";
+import useTitle from "./hooks/useTitle";
 
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
@@ -13,23 +15,36 @@ import ContactMe from "./components/ContactMe/ContactMe";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
+  // LanguageSwitch hooks
   const [isChecked, setIsChecked] = useLocalStorage("currentLanguage", "ru");
   const currentLanguage = useCurrentLanguage(isChecked);
+  // Section refs
+  const headerRef = useRef(null);
+  const aboutMeRef = useRef(null);
+  const toolsAndSkillsRef = useRef(null);
+  const myProjectsRef = useRef(null);
+  const contactMeRef = useRef(null);
+  const scrollToTopRef = useRef(null);
+  const navbarRef = useRef(null);
+  const rootRef = useRef(null);
 
-  useEffect(() => {
-    document.title = currentLanguage.header.heading;
-  });
+  useTitle(currentLanguage.header.heading);
 
   return (
-    <div>
-      <ScrollToTop />
+    <div ref={rootRef}>
+      <ScrollToTop headerRef={headerRef} ref={scrollToTopRef} />
       <Navbar
         navbar={currentLanguage.navbar}
         isChecked={isChecked}
         setIsChecked={setIsChecked}
+        aboutMeRef={aboutMeRef}
+        toolsAndSkillsRef={toolsAndSkillsRef}
+        myProjectsRef={myProjectsRef}
+        contactMeRef={contactMeRef}
+        ref={navbarRef}
       />
-      <Header header={currentLanguage.header} />
-      <AboutMe aboutMe={currentLanguage.about_me} />
+      <Header header={currentLanguage.header} ref={headerRef} />
+      <AboutMe aboutMe={currentLanguage.about_me} ref={aboutMeRef} />
       <ToolsAndSkills
         toolsHeading={currentLanguage.tools_and_skills.tools.heading}
         skillsHeading={currentLanguage.tools_and_skills.skills.heading}
@@ -37,9 +52,16 @@ const App = () => {
         foreignLanguages={
           currentLanguage.tools_and_skills.skills.foreign_languages
         }
+        ref={toolsAndSkillsRef}
       />
-      <MyProjects myProjects={currentLanguage.my_projects} />
-      <ContactMe contactMe={currentLanguage.contact_me} />
+      <MyProjects
+        myProjects={currentLanguage.my_projects}
+        navbarRef={navbarRef}
+        scrollToTopRef={scrollToTopRef}
+        rootRef={rootRef}
+        ref={myProjectsRef}
+      />
+      <ContactMe contactMe={currentLanguage.contact_me} ref={contactMeRef} />
     </div>
   );
 };

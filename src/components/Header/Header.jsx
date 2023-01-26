@@ -1,8 +1,8 @@
-import React from "react";
+import React, {forwardRef} from "react";
 
-const Header = ({ header }) => {
+const Header = forwardRef(({ header }, ref) => {
   return (
-    <section className="landing-header">
+    <section className="landing-header" ref={ref}>
       <header>
         <h1>{header.heading}</h1>
         <div className="content">
@@ -11,6 +11,6 @@ const Header = ({ header }) => {
       </header>
     </section>
   );
-};
+});
 
 export default Header;

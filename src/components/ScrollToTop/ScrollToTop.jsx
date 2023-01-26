@@ -1,10 +1,18 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import './ScrollToTop.scss'
+import React, { useState, useEffect, forwardRef } from "react";
+import "./ScrollToTop.scss";
 import ui from "../../assets/ui";
 
-const ScrollToTop = () => {
+const handleScroll = (ref) => {
+  ref.current.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest",
+  });
+};
+
+const ScrollToTop = forwardRef(({ headerRef }, ref) => {
   const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (
@@ -18,19 +26,14 @@ const ScrollToTop = () => {
   }, []);
 
   return (
-    <div className="btn scroll-to-top">
+    <div className="btn scroll-to-top" ref={ref}>
       {isVisible && (
-        <button
-          onClick={() => {
-            // for some reason behavior: "smooth" doesn't work
-            window.scrollTo({ top: 0 });
-          }}
-        >
+        <button onClick={() => handleScroll(headerRef)}>
           <img src={ui.upArrow} alt="up chevron" />
         </button>
       )}
     </div>
   );
-}
+});
 
-export default ScrollToTop
+export default ScrollToTop;

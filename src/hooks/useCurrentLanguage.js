@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import textContent from "../assets/textContent.json";
 
 const useCurrentLanguage = (checked) => {

@@ -1,11 +1,12 @@
 // add error popup
 
 import React, { useRef, useState } from "react";
-import './ContactMe.scss'
+import { forwardRef } from "react";
+import "./ContactMe.scss";
 import usePopup from "../../hooks/usePopup";
 import emailjs from "@emailjs/browser";
 
-export default function ContactMe({ contactMe }) {
+const ContactMe = forwardRef(({ contactMe }, ref) => {
   const form = useRef();
   const [isMessageSent, setIsMessageSent] = usePopup(false);
   const [isSending, setIsSending] = useState(false);
@@ -52,7 +53,7 @@ export default function ContactMe({ contactMe }) {
   };
 
   return (
-    <section className="contact-me" id="contact_me">
+    <section className="contact-me" id="contact_me" ref={ref}>
       <h2 className="contact-me heading">{contactMe.heading}</h2>
       <form
         ref={form}
@@ -112,4 +113,6 @@ export default function ContactMe({ contactMe }) {
       )}
     </section>
   );
-}
+});
+
+export default ContactMe;

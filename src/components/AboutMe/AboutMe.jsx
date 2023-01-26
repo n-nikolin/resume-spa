@@ -1,10 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import profilePic from "../../assets/my_photo.jpg";
 import './AboutMe.scss'
 
-const AboutMe = ({ aboutMe }) => {
+const AboutMe = forwardRef(({ aboutMe }, ref) => {
   return (
-    <section className="about-me" id="about_me">
+    <section className="about-me" id="about_me" ref={ref} onClick={()=>console.log(ref)}>
       <div className="about-me heading">
         <h2>{aboutMe.heading}</h2>
       </div>
@@ -14,6 +14,6 @@ const AboutMe = ({ aboutMe }) => {
       </div>
     </section>
   );
-};
+})
 
 export default AboutMe;

@@ -1,43 +1,39 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import './ProjectCard.scss'
-import ProjectCardModal from "../ProjectCardModal/ProjectCardModal";
+import React, { useEffect, useState } from "react";
+import "./ProjectCard.scss";
 import axios from "axios";
-// TODO: think of a way to separate useEffect from component
+import ProjectCardModal from "../ProjectCardModal/ProjectCardModal";
 
-const getTotal = (resp) => {
-  let res = 0;
-  for (let k in resp) {
-    res += resp[k];
-  }
-  return res;
-};
-
-const offsetScrollWidth = (modalState) => {
-  const scrollWidth =
-    window.innerWidth - document.getElementById("root").offsetWidth;
-  document.body.style.overflow = modalState ? "hidden" : "auto";
-  document.body.style.paddingRight = modalState ? `${scrollWidth}px` : "0";
-  document.getElementsByClassName("navbar")[0].style.marginRight = modalState
-    ? `${scrollWidth}px`
-    : "0";
-  document.getElementsByClassName("scroll-to-top")[0].style.marginRight = modalState
-    ? `${scrollWidth}px`
-    : "0";
-};
-
-const ProjectCard = (props) => {
+const ProjectCard = ({
+  id,
+  title,
+  description,
+  langUrl,
+  repoUrl,
+  navbarRef,
+  scrollToTopRef,
+  rootRef,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [fetching, setFetching] = useState(false);
-  const [languages, setLanguages] = useState([])
+  const [languages, setLanguages] = useState([]);
   const [total, setTotal] = useState();
+
+  const offsetScrollWidth = (modalState) => {
+    const scrollWidth = window.innerWidth - rootRef.current.offsetWidth;
+    document.body.style.overflow = modalState ? "hidden" : "auto";
+    document.body.style.paddingRight = modalState ? `${scrollWidth}px` : "0";
+    navbarRef.current.style.marginRight = modalState ? `${scrollWidth}px` : "0";
+    scrollToTopRef.current.style.marginRight = modalState
+      ? `${scrollWidth}px`
+      : "0";
+  };
 
   useEffect(() => {
     offsetScrollWidth(isOpen);
     if (isOpen) {
       setFetching(true);
       axios
-        .get(props.langUrl, {
+        .get(langUrl, {
           headers: {
             Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
           },
@@ -48,7 +44,7 @@ const ProjectCard = (props) => {
           setFetching(false);
         })
         .catch((err) => {
-          if (err.response.status===401) {
+          if (err.response.status === 401) {
             setFetching(false);
           } else {
             console.log(err);
@@ -59,13 +55,13 @@ const ProjectCard = (props) => {
 
   return (
     <div className="project-card" onClick={() => setIsOpen(true)}>
-      <h3>{props.title}</h3>
-      <p className="clamped">{props.description}</p>
+      <h3>{title}</h3>
+      <p className="clamped">{description}</p>
       <ProjectCardModal
-        id={props.id}
-        title={props.title}
-        description={props.description}
-        repoUrl={props.repo_url}
+        id={id}
+        title={title}
+        description={description}
+        repoUrl={repoUrl}
         languages={languages}
         total={total}
         modalOpen={isOpen}
@@ -77,3 +73,9 @@ const ProjectCard = (props) => {
 };
 
 export default ProjectCard;
+
+
+const getTotal = (resp) => {
+  const total = Object.values(resp).reduce((prev, curr) => prev + curr, 0);
+  return total;
+};
