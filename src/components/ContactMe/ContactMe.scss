@@ -1,4 +1,4 @@
-@use '../../App.scss' as a;
+@use "../../vars" as v;
 
 .contact-me {
   max-width: 70ch;
@@ -22,12 +22,12 @@
       font-weight: inherit;
       text-decoration: none;
       font-family: inherit;
-      @media screen and (max-width: a.$mobile) {
+      @media screen and (max-width: v.$mobile) {
         width: 100%;
       }
     }
     textarea {
-      color: a.$primary-color;
+      color: v.$primary-color;
       resize: none;
       height: 10rem;
       margin-bottom: 0.5rem;
@@ -40,8 +40,8 @@
     }
     button {
       display: block;
-      background-color: a.$submit-button;
-      color: a.$content-color;
+      background-color: v.$submit-button;
+      color: v.$content-color;
       padding: 1rem;
       border: none;
       width: 100%;
@@ -51,7 +51,7 @@
       &:hover {
         cursor: pointer;
       }
-      @media screen and (max-width: a.$mobile) {
+      @media screen and (max-width: v.$mobile) {
         width: 100%;
       }
     }
@@ -61,8 +61,8 @@
     pointer-events: none;
     textarea,
     input {
-      background-color: a.$content-background;
-      border: a.$primary-light solid 2px;
+      background-color: v.$content-background;
+      border: v.$primary-light solid 2px;
     }
     button {
       background-color: rgb(221, 206, 151);

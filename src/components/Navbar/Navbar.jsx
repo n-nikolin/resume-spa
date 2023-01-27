@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, forwardRef } from "react";
 import "./Navbar.scss";
 import ui from "../../assets/ui";
+import handleScroll from "../../utils/handleScroll";
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
-import { forwardRef } from "react";
 
 const Navbar = forwardRef(
   (
@@ -22,14 +22,6 @@ const Navbar = forwardRef(
 
     const toggleVisible = () => {
       setIsOpen(!isOpen);
-    };
-
-    const handleScroll = (ref) => {
-      ref.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
     };
 
     useEffect(() => {

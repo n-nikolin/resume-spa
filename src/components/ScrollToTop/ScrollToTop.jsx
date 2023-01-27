@@ -1,14 +1,7 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import "./ScrollToTop.scss";
 import ui from "../../assets/ui";
-
-const handleScroll = (ref) => {
-  ref.current.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-    inline: "nearest",
-  });
-};
+import handleScroll from "../../utils/handleScroll";
 
 const ScrollToTop = forwardRef(({ headerRef }, ref) => {
   const [isVisible, setIsVisible] = useState(false);

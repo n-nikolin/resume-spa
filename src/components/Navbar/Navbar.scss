@@ -1,4 +1,4 @@
-@use '../../App.scss' as a;
+@use "../../vars" as v;
 
 .navbar {
     display: flex;
@@ -47,11 +47,11 @@
     p {
       display: block;
       text-decoration: none;
-      color: a.$primary-light;
+      color: v.$primary-light;
       width: 100%;
       cursor: pointer;
       &:hover {
-        color: a.$content-color;
+        color: v.$content-color;
         font-size: 1.2rem;
       }
     }

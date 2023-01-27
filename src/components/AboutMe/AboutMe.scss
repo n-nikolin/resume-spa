@@ -1,10 +1,10 @@
-@use '../../App.scss' as a;
+@use "../../vars" as v;
 
 .about-me {
   .content {
     // display: flex;
     // flex-direction: row-reverse;
-    background-color: a.$content-background;
+    background-color: v.$content-background;
     border-radius: 2rem;
     padding: 0.5em;
     overflow: auto;
@@ -13,7 +13,7 @@
       max-width: 25ch;
       height: 100%;
       border-radius: 50%;
-      border: solid 2px a.$primary-light;
+      border: solid 2px v.$primary-light;
     }
     p {
       margin: 0 1rem;
@@ -21,12 +21,31 @@
       max-width: 72ch;
       padding-right: 1ch;
     }
-    @media screen and (max-width: a.$mobile) {
+    @media screen and (max-width: v.$mobile) {
       display: block;
       justify-content: space-around;
       img {
         width: 15ch;
         margin-left: 1ch;
+      }
+    }
+  }
+  .links {
+    text-align: right;
+    h3 {
+      margin: 0;
+      padding: 0;
+      margin-right: 0.2rem;
+    }
+    a {
+      margin-left: auto;
+      margin-right: 0.2rem;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      img {
+        width: 1.3rem;
+        filter: invert(0.97);
       }
     }
   }

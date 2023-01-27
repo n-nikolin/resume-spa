@@ -74,8 +74,5 @@ const ProjectCard = ({
 
 export default ProjectCard;
 
-
-const getTotal = (resp) => {
-  const total = Object.values(resp).reduce((prev, curr) => prev + curr, 0);
-  return total;
-};
+const getTotal = (resp) =>
+  Object.values(resp).reduce((prev, curr) => prev + curr, 0);

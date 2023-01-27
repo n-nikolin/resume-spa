@@ -1,16 +1,4 @@
-// fonts
-$font-stack: Montserrat, sans-serif;
-
-// TODO: play around a bit so it has more contrast
-// colors
-$primary-color: black;
-$primary-light: rgb(233, 232, 231);
-$background-color: #2e5266ff;
-$section-background: #6e8898ff;
-$content-background: #9fb1bcff;
-$submit-button: #e2c044ff;
-$content-color: white;
-
+@use "./vars" as v;
 // dynamic classes and ids
 #closed {
   display: none;
@@ -25,9 +13,6 @@ $content-color: white;
   display: block;
 }
 
-// media queries
-$mobile: 700px;
-
 // general styling
 * {
   margin: 0;
@@ -41,9 +26,9 @@ $mobile: 700px;
 }
 
 body {
-  font: 100% $font-stack;
-  color: $primary-light;
-  background-color: $background-color;
+  font: 100% v.$font-stack;
+  color: v.$primary-light;
+  background-color: v.$background-color;
   white-space: break-spaces;
   h1 {
     line-height: 2.5;
@@ -63,7 +48,12 @@ section {
   max-width: 90ch;
   margin: 2rem auto;
   text-align: center;
-  background-color: $section-background;
+  background-color: v.$section-background;
+}
+
+a{
+  text-decoration: none;
+  color: inherit
 }
 
 button {
@@ -76,17 +66,15 @@ form,
 .project-card,
 button,
 .wrapper {
-  border: $primary-light solid 2px;
+  border: v.$primary-light solid 2px;
   border-radius: 2rem;
   padding: 1rem;
-  // try drop-shadow for fun
-  // filter: drop-shadow(0 0 0.15rem)
 }
 
 form,
 .content,
 .project-card,
 .gallery {
-  background-color: $content-background;
-  color: $content-color;
+  background-color: v.$content-background;
+  color: v.$content-color;
 }
